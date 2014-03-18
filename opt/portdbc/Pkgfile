@@ -1,0 +1,17 @@
+# Description: CRUX's portdb command line client
+# URL: http://sepen.it.cx/releases/
+# Maintainer: Jose V Beneyto, sepen at crux dot nu 
+# Packager: Jose V Beneyto, sepen at crux dot nu 
+# Depends on: curl libxml2
+
+name=portdbc
+version=1.1
+release=1
+source=(http://sepen.it.cx/releases/$name-$version.tar.bz2)
+
+build() {
+  cd $name-$version
+
+  make
+  make DESTDIR=$PKG install
+}

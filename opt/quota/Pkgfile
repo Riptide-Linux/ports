@@ -1,0 +1,29 @@
+# Description: Tools for the Linux quota system
+# URL:         http://sourceforge.net/projects/linuxquota/
+# Packager:    Mikhail Kolesnik, mike at openbunker dot org
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  e2fsprogs tcp_wrappers
+
+name=quota
+version=4.00
+release=1
+source=(http://download.sourceforge.net/linuxquota/$name-$version.tar.gz \
+        warnquota.conf quotagrpadmins)
+
+build(){
+    cd $name-tools
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --sysconfdir=/etc \
+                --enable-nls=no \
+                --enable-altformat=yes \
+                --enable-rpc=yes \
+                --enable-nis=no \
+                --enable-bsd_behaviour=yes \
+                --enable-rootsbin=yes
+    make
+    make install ROOTDIR=$PKG
+    rm -r $PKG/usr/include
+    install -D -m 644 $SRC/warnquota.conf $PKG/etc/warnquota.conf
+    install -D -m 644 $SRC/quotagrpadmins $PKG/etc/quotagrpadmins
+}

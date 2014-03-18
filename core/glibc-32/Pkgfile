@@ -1,0 +1,56 @@
+# Description: The C library used in the GNU system
+# URL:         http://www.gnu.org/software/libc/
+# Maintainer:  CRUX System Team, core-ports at crux dot nu
+
+name=glibc-32
+version=2.16.0
+release=3
+source=(http://ftp.gnu.org/gnu/glibc/glibc-$version.tar.xz \
+	http://crux.nu/files/distfiles/kernel-headers-3.4.11.tar.xz \
+	$name-$version-multilib-dirs.patch \
+	hosts resolv.conf nsswitch.conf host.conf ld.so.conf \
+	lib32.conf \
+	glibc-resolv_assert.patch \
+	glibc-segfault_in_strncasecmp.patch \
+	glibc-strtod_integer_overflow.patch)
+
+build() {
+	# install kernel headers
+	mkdir $PKG/usr/
+	cp -r kernel-headers-3.4.11/include $PKG/usr
+	chown root:root $PKG/usr
+
+	patch -p1 -d glibc-$version -i $SRC/glibc-resolv_assert.patch
+	patch -p1 -d glibc-$version -i $SRC/glibc-segfault_in_strncasecmp.patch
+	patch -p1 -d glibc-$version -i $SRC/glibc-strtod_integer_overflow.patch
+	patch -p1 -d glibc-$version -i $SRC/$name-$version-multilib-dirs.patch
+
+	mkdir build
+	cd build
+	CC="${CC:-gcc} -m32" ../glibc-$version/configure --prefix=/usr \
+		--libdir=/usr/lib32 \
+		--libexecdir=/usr/lib32 \
+		--with-headers=$PKG/usr/include \
+		--enable-kernel=2.6.27 \
+		--enable-add-ons \
+		--disable-profile \
+		--without-gd \
+		--enable-obsolete-rpc \
+		--host=i686-pc-linux-gnu
+	make 
+	#make check
+	make install_root=$PKG install
+
+	cp $SRC/{hosts,resolv.conf,nsswitch.conf,host.conf,ld.so.conf} $PKG/etc
+	ln -sf ../usr/share/zoneinfo/UTC $PKG/etc/localtime
+	mkdir -p $PKG/etc/ld.so.conf.d $PKG/usr/lib/locale
+	touch $PKG/etc/ld.so.cache
+
+	rm -rf $PKG/usr/{bin,sbin,share} $PKG/{etc,sbin} $PKG/var
+	(mv $PKG/usr/include/gnu/stubs-32.h $SRC;
+	 rm -rf $PKG/usr/include;
+	 install -D $SRC/stubs-32.h $PKG/usr/include/gnu/stubs-32.h)
+
+	install -D $SRC/lib32.conf $PKG/etc/ld.so.conf.d/lib32.conf
+	mkdir $PKG/lib && ln -s /lib32/ld-linux.so.2 $PKG/lib/ld-linux.so.2
+}

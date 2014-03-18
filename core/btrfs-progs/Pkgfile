@@ -1,0 +1,15 @@
+# Description: Filesystem utilities for btrfs
+# URL:         http://btrfs.wiki.kernel.org
+# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Depends on:  util-linux e2fsprogs
+
+name=btrfs-progs
+version=20121004
+release=1
+source=(http://crux.s3.amazonaws.com/dist/$name-$version.tar.xz)
+
+build() {
+    cd $name-$version
+    make CFLAGS="$CFLAGS"
+    make prefix=/usr bindir=/sbin DESTDIR=$PKG install
+}

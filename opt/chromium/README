@@ -1,0 +1,14 @@
+
+README for chromium
+
+
+POSTINSTALLATION
+
+	If you can't run chromium and you got a message like this:
+
+	$ chromium
+	[1410:1410:1506374616:FATAL:platform_font_gtk.cc(329)] Check failed: typeface.
+        Could not find any font: Fixed, sans
+        Aborted
+
+	you could solve this by installing for example xorg/xorg-font-dejavu-ttf.

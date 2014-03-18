@@ -1,0 +1,12 @@
+diff -Nru MySQL-python-1.2.3.orig/setup.py MySQL-python-1.2.3/setup.py
+--- MySQL-python-1.2.3.orig/setup.py	2010-06-17 15:05:12.954472025 +0200
++++ MySQL-python-1.2.3/setup.py	2010-04-27 10:00:04.000000000 +0200
+@@ -2,6 +2,8 @@
+ 
+ import os
+ import sys
++from ez_setup import use_setuptools
++use_setuptools()
+ from setuptools import setup, Extension
+ 
+ if not hasattr(sys, "hexversion") or sys.hexversion < 0x02030000:

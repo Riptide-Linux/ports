@@ -1,0 +1,61 @@
+diff -Nru dnsmasq-2.61.orig/Makefile dnsmasq-2.61/Makefile
+--- dnsmasq-2.61.orig/Makefile	2012-04-29 17:29:37.527992253 +0200
++++ dnsmasq-2.61/Makefile	2012-04-29 17:29:51.834373337 +0200
+@@ -20,11 +20,11 @@
+ 
+ PREFIX        = /usr/local
+ BINDIR        = $(PREFIX)/sbin
+-MANDIR        = $(PREFIX)/share/man
++MANDIR        = $(PREFIX)/man
+ LOCALEDIR     = $(PREFIX)/share/locale
+ BUILDDIR      = $(SRC)
+ DESTDIR       = 
+-CFLAGS        = -Wall -W -O2
++CFLAGS        += -Wall -W
+ LDFLAGS       = 
+ COPTS         = 
+ RPM_OPT_FLAGS = 
+diff -Nru dnsmasq-2.61.orig/dnsmasq.conf.example dnsmasq-2.61/dnsmasq.conf.example
+--- dnsmasq-2.61.orig/dnsmasq.conf.example	2012-04-29 17:29:37.534658843 +0200
++++ dnsmasq-2.61/dnsmasq.conf.example	2012-04-29 17:29:51.834373337 +0200
+@@ -80,8 +80,8 @@
+ 
+ # If you want dnsmasq to change uid and gid to something other
+ # than the default, edit the following lines.
+-#user=
+-#group=
++#user=nobody
++#group=nobody
+ 
+ # If you want dnsmasq to listen for DHCP and DNS requests only on
+ # specified interfaces (and the loopback) give the name of the
+@@ -498,7 +498,7 @@
+ # The DHCP server needs somewhere on disk to keep its lease database.
+ # This defaults to a sane location, but if you want to change it, use
+ # the line below.
+-#dhcp-leasefile=/var/lib/misc/dnsmasq.leases
++# dhcp-leasefile=/var/lib/dhcp/dnsmasq.leases
+ 
+ # Set the DHCP server to authoritative mode. In this mode it will barge in
+ # and take over the lease for any client which broadcasts on the network,
+diff -Nru dnsmasq-2.61.orig/src/config.h dnsmasq-2.61/src/config.h
+--- dnsmasq-2.61.orig/src/config.h	2012-04-29 17:29:37.534658843 +0200
++++ dnsmasq-2.61/src/config.h	2012-04-29 17:29:51.834373337 +0200
+@@ -36,7 +36,7 @@
+ #define RUNFILE "/var/run/dnsmasq.pid"
+ #define DEFLEASE 3600 /* default lease time, 1 hour */
+ #define CHUSER "nobody"
+-#define CHGRP "dip"
++#define CHGRP "nobody"
+ #define TFTP_MAX_CONNECTIONS 50 /* max simultaneous connections */
+ #define LOG_MAX 5 /* log-queue length */
+ #define RANDFILE "/dev/urandom"
+@@ -138,7 +138,7 @@
+ #   elif defined(__ANDROID__)
+ #      define LEASEFILE "/data/misc/dhcp/dnsmasq.leases"
+ #   else
+-#      define LEASEFILE "/var/lib/misc/dnsmasq.leases"
++#      define LEASEFILE "/var/lib/dhcp/dnsmasq.leases"
+ #   endif
+ #endif
+ 

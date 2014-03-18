@@ -1,0 +1,22 @@
+# Description: ejects CDs and operates CD-Changers
+# URL:         http://sites.google.com/site/tranter/software
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Packager:    sten, nick dot steeves at shaw dot ca
+
+name=eject
+version=2.1.5
+release=1
+source=(http://www.mirrorservice.org/sites/www.ibiblio.org/gentoo/distfiles/$name-$version.tar.gz)
+
+build() {
+    cd $name
+
+    ./configure \
+  --prefix=/usr \
+        --enable-default-device=/dev/cdrom \
+        --disable-nls
+    make
+    make DESTDIR=$PKG install
+
+    rm -rf $PKG/usr/share
+}

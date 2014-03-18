@@ -1,0 +1,90 @@
+# Description: TeX distribution for UNIX compatible systems.
+# URL: http://www.tug.org/tetex/
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Danny Rawlins, monster dot romster at gmail dot com
+# Depends on: icu libgd libsigsegv poppler t1lib util-linux xz clisp
+
+name=texlive
+version=20120701
+release=2
+source=(ftp://tug.org/historic/systems/texlive/2012/$name-$version-source.tar.xz
+	ftp://tug.org/historic/systems/texlive/2012/$name-$version-texmf.tar.xz
+	http://download.savannah.gnu.org/releases/texi2html/texi2html-5.0.tar.bz2
+	source-fixup_texmf-local_tree_in_texmf_cnf.diff
+	texmf-fixup_texmf-local_tree_in_texmf_cnf.diff)
+
+build() {
+	cd $name-$version-source
+
+	chmod -R a-s $SRC
+	find $SRC \
+		\( -perm 777 -o -perm 775 -o -perm 711 -o -perm 555 -o -perm 511 \) \
+		-exec chmod 755 {} \; -o \
+		\( -perm 666 -o -perm 664 -o -perm 600 -o -perm 444 -o -perm 440 -o -perm 400 \) \
+		-exec chmod 644 {} \;
+
+	# Fix up some paths
+	patch -p 1 -i $SRC/source-fixup_texmf-local_tree_in_texmf_cnf.diff
+
+	unset TEXMFCNF ; export TEXMFCNF
+	KPATHSEA_WARNING=0 ; export KPATHSEA_WARNING
+
+	mkdir build
+	cd build
+
+	../configure \
+		--prefix=/usr \
+		--mandir=/usr/man \
+		--with-banner-add="$(crux)" \
+		--disable-native-texlive-build \
+		--enable-largefile \
+		--disable-missing \
+		--with-xdvi-x-toolkit=xaw \
+		--enable-shared \
+		--disable-static \
+		--with-x \
+		--without-etex \
+		--disable-xindy \
+		--with-clisp-runtime=system \
+		--with-system-poppler \
+		--with-system-xpdf \
+		--with-system-ncurses \
+		--with-system-zlib \
+		--with-system-libpng \
+		--with-system-t1lib \
+		--with-system-gd \
+		--with-system-freetype2
+
+	make
+	make DESTDIR=$PKG install
+	cd ..
+
+	# Create symlinks
+	PATH="$PATH:$PKG/usr/bin" LD_LIBRARY_PATH+=$PKG/usr/lib \
+		texlinks -f $PKG/usr/share/texmf/web2c/fmtutil.cnf $PKG/usr/bin
+
+	# Install the docs while we're still here
+	mkdir -p $PKG/usr/doc/texlive-$version
+	cp -a ChangeLog README* $PKG/usr/doc/texlive-$version
+
+	# and now we'll install the texmf stuff
+	cd $SRC/$name-$version-texmf
+
+	# Fix up some paths
+	patch -p 1 -i $SRC/texmf-fixup_texmf-local_tree_in_texmf_cnf.diff
+
+	mkdir -p $PKG/usr/share
+	cp -a texmf texmf-dist $PKG/usr/share
+
+	# Now let's add texi2hmtl - http://www.nongnu.org/texi2html/
+	cd $SRC/texi2html-*
+
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/man
+
+	make
+	make install DESTDIR=$PKG
+
+	rm -r $PKG/usr/share/{info,locale}
+}

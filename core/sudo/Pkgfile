@@ -1,0 +1,26 @@
+# Description: Sudo (superuser do)
+# URL:         http://www.sudo.ws/sudo/
+# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Depends on:  zlib
+
+name=sudo
+version=1.8.6p3
+release=1
+source=(http://www.sudo.ws/$name/dist/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+
+    ./configure --prefix=/usr \
+                --libexecdir=/usr/lib \
+                --mandir=/usr/man \
+                --with-logfac=auth \
+                --with-timedir=/var/lib/sudo \
+                --without-pam \
+                --disable-nls
+
+    make
+    make DESTDIR=$PKG install
+
+    rm -r $PKG/usr/share
+}

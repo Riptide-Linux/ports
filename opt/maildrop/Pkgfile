@@ -1,0 +1,28 @@
+# Description: Mail Delivery Agent with filtering abilities
+# URL:         http://www.courier-mta.org/maildrop/
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  gdbm libpcre
+
+name=maildrop
+version=2.6.0
+release=1
+source=(http://download.sourceforge.net/project/courier/$name/$version/$name-$version.tar.bz2)
+
+build () {
+    cd $name-$version
+
+    sed -i '/^MAILDROPMAN/s/=/= makedat.1/' Makefile.in
+
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --with-db=gdbm \
+                --enable-maildrop-uid=root \
+                --enable-maildrop-gid=root \
+                --disable-tempdir \
+                --enable-syslog=1
+    make
+    make DESTDIR=$PKG install
+    
+    chmod u+s $PKG/usr/bin/maildrop
+    rm -r $PKG/usr/{include,lib,man/man3,share}
+}

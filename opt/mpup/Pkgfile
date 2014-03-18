@@ -1,0 +1,17 @@
+# Description: Meta driver script for ports(8)
+# URL: http://sepen.it.cx/releases/
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Packager: Jose V Beneyto, sepen at crux dot nu
+# Depends on: bash ports findutils coreutils
+
+name=mpup
+version=2.0
+release=1
+source=(http://sepen.it.cx/releases/$name-$version.tar.xz)
+
+build() {
+
+  cd $name-$version
+
+  make DESTDIR=$PKG install
+}

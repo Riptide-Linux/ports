@@ -1,0 +1,20 @@
+# Description: A debugging and profiling system for Linux programs
+# URL: http://valgrind.org
+# Maintainer: Tilman Sauerbeck, tilman at crux dot nu
+# Arch Maintainer: 
+
+name=valgrind
+version=3.8.1
+release=1
+source=(http://$name.org/downloads/$name-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+
+	./configure --prefix=/usr --mandir=/usr/man
+	make
+	make DESTDIR=$PKG install
+
+	rm -rf $PKG/usr/share/doc
+	rmdir $PKG/usr/share
+}

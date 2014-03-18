@@ -1,0 +1,18 @@
+# Description: Easily build and distribute Python packages.
+# URL: http://pypi.python.org/pypi/distribute
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Danny Rawlins, monster dot romster at gmail dot com
+# Depends on: python
+
+name=distribute
+version=0.6.30
+release=1
+source=(http://pypi.python.org/packages/source/d/$name/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	python setup.py install --root=$PKG
+
+	chmod -R og-w $PKG
+}

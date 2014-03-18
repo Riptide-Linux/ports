@@ -1,0 +1,22 @@
+# Description: GNUPlot, a graph plotting software
+# URL:         http://www.gnuplot.info/
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Packager:    Martin Opel, mo at obbl-net dot de
+# Depends on:  libgd pango
+
+name=gnuplot
+version=4.6.1
+release=1
+source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --libexecdir=/usr/lib \
+                --with-x \
+                --without-wxwidgets
+    make
+    make DESTDIR=$PKG install
+    rm -rf $PKG/usr/share/info
+}

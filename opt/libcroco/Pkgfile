@@ -1,0 +1,23 @@
+# Description: Generic Cascading Style Sheet parsing and manipulation toolkit.
+# URL: https://launchpad.net/libcroco
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Packager: Matt Housh, jaeger at morpheus dot net
+# Depends on: libxml2 pango
+
+name=libcroco
+version=0.6.8
+release=1
+source=(http://download.gnome.org/sources/$name/${version%.*}/$name-$version.tar.xz)
+
+build() {
+  cd $name-$version
+
+  ./configure --prefix=/usr
+
+  make
+  make DESTDIR=$PKG install
+  ln -s libcroco-${version%.*}.la $PKG/usr/lib/libcroco.la
+
+  # remove gtk-doc
+  rm -r $PKG/usr/share
+}

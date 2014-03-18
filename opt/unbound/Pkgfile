@@ -1,0 +1,36 @@
+# Description: Validating, recursive, and caching DNS resolver
+# URL:         http://unbound.net/index.html
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  openssl expat
+
+name=unbound
+version=1.4.19
+release=1
+source=(http://www.unbound.net/downloads/$name-$version.tar.gz
+        http://www.nlnetlabs.nl/downloads/ldns/ldns-1.6.16.tar.gz
+        unbound)
+
+build () {
+    cd ldns-1.6.16
+    ./configure --disable-shared
+    make
+
+    cd ../$name-$version
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --sysconfdir=/etc \
+                --with-pidfile=/var/run/unbound.pid \
+                --with-chroot-dir=/etc/unbound \
+                --with-rootkey-file=/etc/unbound/anchor/root.key \
+                --disable-shared \
+                --with-username=unbound \
+                --with-ldns=../ldns-1.6.16
+
+    make
+    make DESTDIR=$PKG install
+
+    rm -r $PKG/usr/{lib,include,man/man3}
+
+    install -d -o unbound -g unbound $PKG/etc/unbound/anchor
+    install -D -m 755 $SRC/unbound $PKG/etc/rc.d/unbound
+}

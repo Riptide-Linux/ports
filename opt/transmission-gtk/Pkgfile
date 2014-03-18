@@ -1,0 +1,25 @@
+# Description: BitTorrent client with gtk user interface
+# URL:         http://transmission.m0k.org/
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  curl intltool gtk3 libevent
+
+name=transmission-gtk
+version=2.74
+release=1
+source=(http://download.m0k.org/transmission/files/transmission-$version.tar.xz)
+
+build() {
+    cd transmission-$version
+
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --with-gtk \
+                --disable-cli \
+                --disable-daemon
+    make
+    make DESTDIR=$PKG install
+
+    sed -ri '/\[.+\]=/d' $PKG/usr/share/applications/transmission-gtk.desktop
+    rm $PKG/usr/{bin,man/man1}/transmission-{create,edit,show}*
+    rm -r $PKG/usr/share/{locale,transmission}
+}

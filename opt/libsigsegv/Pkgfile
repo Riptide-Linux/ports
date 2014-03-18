@@ -1,0 +1,21 @@
+# Description: GNU libsigsegv is a library for handling page faults in user mode.
+# URL: http://savannah.gnu.org/projects/ibsigsegv/
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Danny Rawlins, monster dot romster at gmail dot com
+
+name=libsigsegv
+version=2.10
+release=1
+source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
+
+build() {
+	cd $name-$version
+
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/man \
+		--enable-shared
+
+	make
+	make install DESTDIR=$PKG
+}

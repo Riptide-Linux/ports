@@ -1,0 +1,20 @@
+# Description: Low-level data structure handling, portability wrappers, and interfaces for runtime functionality
+# URL:         http://www.gtk.org/
+# Maintainer:  Fredrik Rinnestam, fredrik at crux dot nu
+# Depends on:  libpcre libffi python
+
+name=glib
+version=2.34.3
+release=1
+source=(http://download.gnome.org/sources/$name/2.34/$name-$version.tar.xz)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --with-pcre=system
+    make
+    make -j1 DESTDIR=$PKG install
+    rm -rf $PKG/usr/share/{gtk-doc,locale}
+    rm -r $PKG/usr/share/bash-completion
+}

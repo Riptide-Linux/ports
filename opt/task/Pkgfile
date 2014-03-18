@@ -1,0 +1,26 @@
+# Description: Powerful task manager for the command-line 
+# URL:         http://taskwarrior.org/projects/show/taskwarrior/ 
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  util-linux cmake
+
+name=task
+version=2.1.2
+release=1
+source=(http://www.taskwarrior.org/download/$name-$version.tar.gz)
+
+build () {
+    cd $name-$version
+    
+    cmake . \
+        -DCMAKE_INSTALL_PREFIX=/usr \
+        -DTASK_MAN1DIR=man/man1 \
+        -DTASK_MAN5DIR=man/man5 \
+        -DTASK_DOCDIR=share/task
+    
+    make
+    make DESTDIR=$PKG install
+
+    rm -r $PKG/usr/share/task/i18n
+    rm $PKG/usr/share/task/{AUTHORS,COPYING,ChangeLog,NEWS,README,INSTALL}
+    rm $PKG/usr/share/task/scripts/vim/README
+}

@@ -1,0 +1,26 @@
+# Description: GNU shar (encoding/decoding) utilities
+# URL: http://www.gnu.org/software/sharutils/sharutils.html
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Packager:  Antti Nykanen, aon at iki dot fi
+# Depends on: 
+
+name=sharutils
+version=4.11.1
+release=2
+source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.bz2)
+
+build(){
+  cd $name-$version
+
+  # fix for glibc 'gets' removal
+  sed -i -e '/gets is a/d' lib/stdio.in.h
+
+  ./configure --prefix=/usr \
+              --mandir=/usr/man \
+              --disable-nls
+
+  make
+  make DESTDIR=$PKG install
+
+  rm -rf $PKG/usr/share
+}

@@ -1,0 +1,24 @@
+# Description: Widely used set of C/C++ libraries providing Unicode and Globalization support.
+# URL: http://www.icu-project.org/
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Younes Hafri, ycrux at club-internet dot fr
+
+name=icu
+version=49.1.1
+release=1
+source=(http://download.icu-project.org/files/icu4c/$version/icu4c-${version//./_}-src.tgz)
+
+build() {
+	cd icu/source
+
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/man \
+		--disable-samples \
+		--disable-tests
+
+	make
+	make DESTDIR=$PKG install
+
+	rm $PKG/usr/share/icu/$version/license.html
+}

@@ -1,0 +1,76 @@
+
+README for mailman
+
+
+PRE-INSTALL
+
+  Execute the pre-install script to add a new mailman user/group
+
+
+NOTES
+
+  Configure options:
+
+    $ less /usr/lib/mailman/Mailman/Defaults.py
+    $ sudo vim /etc/mailman/mm_cfg.py
+
+  Configure aliases for Postfix MTA:
+  
+    $ sudo /usr/lib/mailman/bin/genaliases
+    $ sudo vim /etc/postfix/main.cf
+  
+    [...]
+    alias_maps = hash:/etc/postfix/aliases, hash:/etc/mailman/aliases, ...
+    [...]
+  
+    $ sudo newaliases
+
+  To create a new list:
+
+    $ sudo /usr/lib/mailman/bin/newlist
+
+  To check perimissions:
+
+    $ sudo /usr/lib/mailman/bin/check_perms -v
+
+  Maybe after create your first list you need to setup some directories/files:
+
+    $ sudo chown mailman:mailman /etc/mailman/aliases*
+    $ sudo chmod 660 /etc/mailman/aliases.db
+
+  To configure httpd settings (without vhosts) append this to your httpd.conf:
+
+    [...]
+    ScriptAlias /mailman/ /usr/lib/mailman/cgi-bin/
+    <Directory "/usr/lib/mailman/cgi-bin/">
+      AllowOverride None
+      Options ExecCGI
+      Order allow,deny
+      Allow from all
+    </Directory>
+
+    Alias /pipermail/ /var/lib/mailman/archives/public/
+    <Directory "/var/lib/mailman/archives/public">
+      Options +FollowSymLinks
+      Order allow,deny
+      Allow from all
+    </Directory>
+
+    # Uncomment the following line, replacing www.example.com with your server's
+    # name, to redirect queries to /mailman to the listinfo page (recommended).
+    RedirectMatch ^/mailman[/]*$ http://www.example.com/mailman/listinfo
+    [...]
+
+
+  
+
+  IMPORTANT: If archives/private is not o+x, then the owner of archives/private
+  must be the web server user whatever that is - i.e. the web server user must be
+  able to search in archives/private.
+
+  $ ls -ld /var/lib/mailman/archives/p*
+  drwxrws--x 6 root mailman 4096 Jan 12 17:02 /var/lib/mailman/archives/private
+  drwxrwsr-x 2 root mailman 4096 Jan 12 17:02 /var/lib/mailman/archives/public
+
+  The owner (root) is not important. the group is Mailman's group and may or may
+  not be 'mailman' (e.g. on a debian/ubuntu package install, it is 'list')

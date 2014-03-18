@@ -1,0 +1,18 @@
+# Description: Controls the generation of executables and other compile-related tasks
+# URL:         http://www.gnu.org/software/make/
+# Maintainer:  CRUX System Team, core-ports at crux dot nu
+
+name=make
+version=3.82
+release=3
+source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.bz2
+        $name-$version-bug_{30612,30653,30723}.patch)
+
+build() {
+    cd $name-$version
+    cat $SRC/$name-$version-*.patch | patch -p1
+    ./configure --prefix=/usr --mandir=/usr/man --disable-nls
+    make
+    make DESTDIR=$PKG install
+    rm -r $PKG/usr/share
+}

@@ -1,0 +1,18 @@
+# Description: Gtk+ based image viewer
+# URL:         http://geeqie.sourceforge.net/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-onlione dot de
+# Depends on:  gtk
+
+name=geeqie
+version=1.0
+release=1
+source=(http://downloads.sourceforge.net/project/$name/$name/$name-$version/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr --mandir=/usr/man 
+    make
+    make DESTDIR=$PKG install
+    sed -ri '/\[.+\]=/d' $PKG/usr/share/{geeqie/,}applications/*.desktop
+    rm -r $PKG/usr/share/{doc,locale}
+}

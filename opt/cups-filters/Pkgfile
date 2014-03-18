@@ -1,0 +1,24 @@
+# Description: Backends and filters for CUPS
+# URL:         http://www.linuxfoundation.org/collaborate/workgroups/openprinting/pdfasstandardprintjobformat
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  cups poppler qpdf
+
+name=cups-filters
+version=1.0.29
+release=1
+source=(http://www.openprinting.org/download/$name/$name-$version.tar.xz)
+
+build () {
+    cd $name-$version
+
+    ./configure --prefix=/usr \
+                --sysconfdir=/etc \
+                --mandir=/usr/man \
+                --without-php \
+                --disable-avahi
+
+    make
+    make DESTDIR=$PKG install
+
+    rm -r $PKG/usr/share/doc
+}

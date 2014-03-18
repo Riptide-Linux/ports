@@ -1,0 +1,12 @@
+diff -urN glibc-2.16.0.orig/sysdeps/gnu/configure glibc-2.16.0/sysdeps/gnu/configure
+--- glibc-2.16.0.orig/sysdeps/gnu/configure	2012-06-30 14:12:34.000000000 -0500
++++ glibc-2.16.0/sysdeps/gnu/configure	2012-07-02 08:30:09.175543310 -0500
+@@ -22,7 +22,7 @@
+     fi
+     ;;
+   *)
+-    libc_cv_slibdir=/lib
++    libc_cv_slibdir=/lib32
+     ;;
+   esac
+   # Allow the user to override the path with --sysconfdir.

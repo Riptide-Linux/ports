@@ -1,0 +1,20 @@
+# Description: Fast and small window manager
+# URL: http://blackboxwm.sourceforge.net
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Packager: Johannes Winkelmann, jw at smts dot ch
+# Depends on: xorg-libxext xorg-libxft
+
+name=blackbox
+version=0.70.1
+release=2
+source=(http://download.sourceforge.net/blackboxwm/$name-$version.tar.bz2
+        blackbox-0.70.1-include-fix.diff)
+ 
+
+build () {
+    cd $name-$version
+    patch -p1 -i $SRC/blackbox-0.70.1-include-fix.diff
+    ./configure --prefix=/usr --disable-nls
+    make
+    make DESTDIR=$PKG install
+}

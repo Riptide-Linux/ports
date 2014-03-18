@@ -1,0 +1,23 @@
+# Description: Free Lossless Audio Codec.
+# URL: http://flac.sourceforge.net/
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Matt Housh, jaeger at morpheus dot net
+# Depends on: libogg
+
+name=flac
+version=1.2.1
+release=2
+source=(http://downloads.sourceforge.net/project/$name/flac-src/$name-$version-src/$name-$version.tar.gz
+	$name.diff)
+
+build() {
+	cd $name-$version
+
+	# fix compilation with gcc 4.3
+	patch -Np1 -i $SRC/$name.diff
+
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/share/doc
+}

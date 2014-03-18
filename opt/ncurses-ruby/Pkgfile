@@ -1,0 +1,18 @@
+# Description: Ruby module for accessing the ncurses library
+# URL:         http://ncurses-ruby.berlios.de
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  ruby 
+
+name=ncurses-ruby
+version=1.2.4
+release=2
+source=(http://download.berlios.de/$name/$name-$version.tar.bz2
+        $name-${version}_ruby-1.9.2.patch)
+
+build () {
+    cd $name-$version
+    patch -p1 -i $SRC/$name-${version}_ruby-1.9.2.patch
+    ruby extconf.rb --vendor
+    make
+    make DESTDIR=$PKG install
+}

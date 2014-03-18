@@ -1,0 +1,26 @@
+# Description:	Portable version of OpenBSD's NTP implementation
+# URL:		http://www.openntpd.org/
+# Maintainer:	Alan Mizrahi, alan at mizrahi dot com dot ve
+# Packager:	Matt Housh, jaeger at morpheus dot net
+
+name=openntpd
+version=3.9p1
+release=3
+source=(ftp://ftp.openbsd.org/pub/OpenBSD/OpenNTPD/$name-$version.tar.gz \
+	ntpd \
+	linux-adjtimex.patch )
+
+build() {
+	cd $name-$version
+	patch -p1 -i $SRC/linux-adjtimex.patch
+
+	./configure \
+		--prefix=/usr \
+		--sysconfdir=/etc \
+		--with-privsep-user=ntp \
+		--with-adjtimex
+	make
+	make DESTDIR=$PKG install
+	
+	install -D -m 0755 $SRC/ntpd $PKG/etc/rc.d/ntpd
+}

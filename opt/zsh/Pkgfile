@@ -1,0 +1,44 @@
+# Description: Very powerfull shell
+# URL: http://www.zsh.org/
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Packager: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: libpcre
+
+name=zsh
+version=5.0.1
+release=1
+source=(http://downloads.sourceforge.net/project/zsh/zsh/$version/zsh-$version.tar.bz2 \
+        zsh-lovers.1)
+
+build() {
+    cd $name-$version
+
+    ./configure \
+      --prefix=/usr \
+      --mandir=/usr/man \
+      --enable-etcdir=/etc/zsh \
+      --enable-zshrc=/etc/zsh/zshrc \
+      --enable-zshlogin=/etc/zsh/zshlogin \
+      --enable-zshenv=/etc/zsh/zshenv \
+      --enable-fndir=/usr/share/zsh/$version/functions \
+      --enable-site-fndir=/usr/share/zsh/site-functions \
+      --enable-zsh-mem \
+      --enable-maildir-support \
+      --enable-function-subdirs \
+      --enable-pcre \
+      --enable-restricted-r \
+      --enable-lfs \
+      --enable-cap \
+      --with-curses-terminfo
+    make
+    make DESTDIR=$PKG install 
+
+    install -m 644 $SRC/zsh-lovers.1 $PKG/usr/man/man1/
+
+    install -d $PKG/bin
+    ln -s /usr/bin/zsh $PKG/bin
+
+    # These completion files break things for CRUX' pkgutils,
+    # so remove them for now (see bug #381).
+    rm $PKG/usr/share/zsh/$version/functions/Completion/Unix/_pkg{add,rm,info}
+}

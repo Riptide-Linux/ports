@@ -1,0 +1,43 @@
+# Description: The Mozilla Firefox browser
+# URL: http://www.mozilla.com/firefox/
+# Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
+# Depends on: nss, libidl, gtk, python, alsa-lib, yasm, mesa3d
+
+name=firefox
+version=18.0
+release=1
+source=(ftp://ftp.mozilla.org/pub/firefox/releases/$version/source/firefox-$version.source.tar.bz2
+        mozconfig)
+
+build() {
+    export MOZ_CO_PROJECT=browser
+    export BUILD_OFFICIAL=1
+    export MOZILLA_OFFICIAL=1
+    export MOZILLA_FIVE_HOME=/usr/lib/firefox
+
+    cd mozilla-release
+    export CFLAGS="$CFLAGS -mno-avx"
+    sed -e "s/#CFLAGS#/$CFLAGS/" $SRC/mozconfig > .mozconfig
+    ./configure
+
+    #mozilla sucks: BZ #824381
+    mkdir $SRC/mozilla-release/js/src/.deps
+
+    make
+
+    install -d \
+        $PKG$MOZILLA_FIVE_HOME \
+        $PKG/usr/bin \
+        $PKG/usr/share/idl/firefox \
+        $PKG/usr/include/firefox
+
+    cp -rL dist/bin/* $PKG$MOZILLA_FIVE_HOME
+    ln -s /usr/lib/firefox/firefox $PKG/usr/bin/firefox
+
+    # devel stuff
+    cp -frL dist/idl/* $PKG/usr/share/idl/firefox/
+    cp -frL dist/include/* $PKG/usr/include/firefox/
+
+    install -d $PKG/etc/ld.so.conf.d
+    echo "/usr/lib/$name" > $PKG/etc/ld.so.conf.d/$name.conf
+}

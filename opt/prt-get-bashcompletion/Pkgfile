@@ -1,0 +1,17 @@
+# Description: Programmable bash completion for prt-get
+# URL: http://www.hta-bi.bfh.ch/~winkj/software_prt-get.html
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Packager: Johannes Winkelmann, jw at tks6 dot net
+# Depends on: bash-completion
+
+name=prt-get-bashcompletion
+version=5.18
+release=2
+source=(http://jw.tks6.net/files/crux/prt-get-$version.tar.gz)
+
+build() {
+    sed -i prt-get-$version/misc/prt-get_complete \
+        -e 's|listofphans|listorphans|'
+    install -D -m 755 prt-get-$version/misc/prt-get_complete \
+        $PKG/etc/bash_completion.d/prt-get
+}

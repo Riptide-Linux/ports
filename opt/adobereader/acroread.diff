@@ -1,0 +1,11 @@
+--- acroread.orig	2011-11-18 11:39:00.303834998 +0100
++++ acroread	2011-11-18 11:30:59.000000000 +0100
+@@ -526,7 +526,7 @@ fi
+ if [ -z "$mozillaPath" ]; then
+   MozPath="`gconftool-2 -g /desktop/gnome/url-handlers/http/command 2>/dev/null | cut -d ' ' -f1 2>/dev/null`"
+   [ -x "${MozPath}" ] || MozPath="`Which "$MozPath"`"
+-  mozillaPath="`readlink "$MozPath" | xargs dirname`"
++  [ -n $MozPath ] || mozillaPath="`readlink "$MozPath" | xargs dirname`"
+   if [ -n "$mozillaPath" ] &&  $TestCmd $TestCmdOption "$mozillaPath/libgtkembedmoz.so" || $TestCmd $TestCmdOption "$mozillaPath/libxul.so" ; then
+     MOZILLA_COMP_PATH="$mozillaPath"
+     export MOZILLA_COMP_PATH

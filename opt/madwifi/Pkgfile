@@ -1,0 +1,16 @@
+# Description: Kernel module for Atheros based 802.11a/b/g cards
+# Maintainer: Till Biedermann, tillbiedermann at yahoo dot de
+# URL: http://madwifi.org
+# Depends on: sharutils
+
+name=madwifi
+version=0.9.4-r4133
+release=1
+source=(http://jue.li/crux/files/$name-$version.tar.xz)
+
+build(){
+    cd $name-$version
+    sed -i '/^WARNINGS/s/-Werror//' Makefile.inc
+    make
+    make DESTDIR=$PKG BINDIR=/usr/bin MANDIR=/usr/man install
+}

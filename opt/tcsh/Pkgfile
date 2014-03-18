@@ -1,0 +1,21 @@
+# Description: Enhanced version of the Berkeley C shell (csh)
+# URL:         http://www.tcsh.org
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  ncurses
+
+name=tcsh
+version=6.18.01
+release=1
+source=(ftp://ftp.astron.com/pub/tcsh/$name-$version.tar.gz \
+        csh.login csh.logout csh.cshrc)
+
+build() {
+    cd $name-$version
+    
+    ./configure --prefix= --disable-nls
+    make
+    make DESTDIR=$PKG mandir=/usr/man install
+    
+    install -d $PKG/etc
+    install -m 644 $SRC/csh.* $PKG/etc
+}

@@ -1,0 +1,27 @@
+# Description: A compiler cache.
+# URL: http://ccache.samba.org/
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Tilman Sauerbeck, tilman at crux dot nu
+
+name=ccache
+version=3.1.9
+release=1
+source=(http://samba.org/ftp/$name/$name-$version.tar.xz)
+
+build() {
+	cd $name-$version
+
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/man
+
+	make
+	make DESTDIR=$PKG install
+
+	install -d $PKG/usr/lib/$name
+	for c in cc c++ gcc g++; do
+		cd $PKG/usr/lib/$name && ln -s ../../bin/ccache $c
+	done
+   
+	rm -rf $PKG/usr/info
+}

@@ -1,0 +1,13 @@
+=======> Downloading 'http://gftp.seul.org/gftp-2.0.19.tar.gz'.
+--2012-10-19 12:21:07--  http://gftp.seul.org/gftp-2.0.19.tar.gz
+Resolving gftp.seul.org... 128.31.0.34
+Connecting to gftp.seul.org|128.31.0.34|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2691419 (2.6M) [application/x-gzip]
+Saving to: '/home/sepen/devel/crux/ports/opt/gftp/gftp-2.0.19.tar.gz.partial'
+
+     0K .......... .......... .......... .......... ..........  1%  102K 25s
+    50K .......... .......... .......... .......... ..........  3%  317K 16s
+   100K .......... .......... .......... .......... ..........  5%  371K 13s
+   150K .......... .......... .......... .......... ..........  7%  484K 11s
+   200K .......... .......... .......... .......... .......

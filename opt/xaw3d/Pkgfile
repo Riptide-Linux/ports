@@ -1,0 +1,17 @@
+# Description: 3D-style graphics library for X 
+# URL:         http://directory.fsf.org/wiki/Xaw3d
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  xorg-libxpm, xorg-libxmu, xorg-imake
+
+name=xaw3d
+version=1.6.2
+release=1
+source=(http://xorg.freedesktop.org/archive/individual/lib/libXaw3d-$version.tar.bz2)
+
+build () {
+    cd libXaw3d-$version
+    ./configure --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+    rm -r $PKG/usr/share
+}

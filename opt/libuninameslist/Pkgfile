@@ -1,0 +1,20 @@
+# Description:  Unicode annotation data library.
+# URL: http://libuninameslist.sourceforge.net/
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Younes Hafri, ycrux at club-internet dot fr
+
+name=libuninameslist
+version=20091231
+release=1
+source=(http://downloads.sourceforge.net/project/$name/libuninameslist%20sources/Unicode_5.2-20091231/$name-$version.tar.bz2)
+
+build() {
+	cd $name
+
+	./configure \
+		--prefix=/usr \
+		--disable-static
+
+	make
+	make DESTDIR=$PKG install
+}

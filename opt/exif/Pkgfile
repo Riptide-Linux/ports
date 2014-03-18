@@ -1,0 +1,16 @@
+# Description: Simple command line interface to libexif
+# URL:         http://libexif.sourceforge.net/
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  libexif popt
+
+name=exif
+version=0.6.21
+release=1
+source=(http://downloads.sourceforge.net/project/libexif/$name/$version/$name-$version.tar.bz2)
+
+build () {
+	cd $name-$version
+	./configure --prefix=/usr --mandir=/usr/man --disable-nls
+	make
+	make DESTDIR=$PKG install
+}

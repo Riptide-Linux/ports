@@ -1,0 +1,16 @@
+# Description: Portable Foreign Function Interface Library
+# URL:         http://sourceware.org/libffi/
+# Maintainer:  Fredrik Rinnestam, fredrik at crux dot nu
+
+name=libffi
+version=3.0.11
+release=2
+source=(ftp://sourceware.org/pub/libffi/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr --mandir=/usr/man
+    make
+    make DESTDIR=$PKG install
+    rm -r $PKG/usr/share
+}

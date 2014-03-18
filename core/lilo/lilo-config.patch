@@ -1,0 +1,86 @@
+diff -Nru lilo-23.2.orig/Makefile lilo-23.2/Makefile
+--- lilo-23.2.orig/Makefile	2011-04-10 09:21:37.196868818 +0200
++++ lilo-23.2/Makefile	2011-04-10 09:23:54.932024504 +0200
+@@ -38,7 +38,6 @@
+ #
+ all: test
+ 	$(MAKE) -C src all
+-	$(MAKE) -C images all
+ 
+ #
+ # everything above plus the statically linked version
+@@ -105,12 +104,8 @@
+ #
+ install:  all
+ 	$(MAKE) -C src install
+-	$(MAKE) -C images install
+-	$(MAKE) -C hooks install
+-	$(MAKE) -C sample install
+ 	$(MAKE) -C scripts install
+ 	$(MAKE) -C man install
+-	$(MAKE) -C dos install
+ 
+ tidy:
+ 	$(MAKE) -C src tidy
+diff -Nru lilo-23.2.orig/make.vars lilo-23.2/make.vars
+--- lilo-23.2.orig/make.vars	2011-04-10 09:21:37.200202030 +0200
++++ lilo-23.2/make.vars	2011-04-10 09:21:51.399684961 +0200
+@@ -70,14 +70,14 @@
+ #   XL_SECS=n   Support for extra large (non-standard) floppies.
+ 
+ CONFIG=-DBDATA -DDSECS=3 -DEVMS -DIGNORECASE -DLVM -DNOKEYBOARD -DONE_SHOT \
+-    -DPASS160 -DREISERFS -DREWRITE_TABLE -DSOLO_CHAIN -DVERSION -DVIRTUAL \
++    -DPASS160 -DREISERFS -DREWRITE_TABLE -DSOLO_CHAIN -DVIRTUAL \
+     -DMDPRAID -DDEVMAPPER
+    
+ # set the following if you wish LILO.COM to be installed
+ DOS_DIR=/dosC/boot
+ 
+ # select place for man pages
+-MAN_DIR=/usr/share/man
++MAN_DIR=/usr/man
+ 
+ # set the compiler optimization level
+ OPT=-Os
+diff -Nru lilo-23.2.orig/man/Makefile lilo-23.2/man/Makefile
+--- lilo-23.2.orig/man/Makefile	2011-04-10 09:21:37.200202030 +0200
++++ lilo-23.2/man/Makefile	2011-04-10 09:21:51.399684961 +0200
+@@ -10,7 +10,6 @@
+ 	mkdir -p $$DESTDIR$(MAN_DIR)/man8
+ 
+ 	install -m 0644  lilo.8  $$DESTDIR$(MAN_DIR)/man8
+-	install -m 0644  mkrescue.8  $$DESTDIR$(MAN_DIR)/man8
+ 	install -m 0644  lilo.conf.5  $$DESTDIR$(MAN_DIR)/man5
+ 	install -m 0644  keytab-lilo.8  $$DESTDIR$(MAN_DIR)/man8
+ 
+diff -Nru lilo-23.2.orig/scripts/Makefile lilo-23.2/scripts/Makefile
+--- lilo-23.2.orig/scripts/Makefile	2011-04-10 09:21:37.203535242 +0200
++++ lilo-23.2/scripts/Makefile	2011-04-10 09:35:24.000183413 +0200
+@@ -8,7 +8,6 @@
+ install:
+ 	mkdir -p $$DESTDIR$(USRSBIN_DIR)
+ 
+-	install -m 0755  liloconfig  $$DESTDIR$(USRSBIN_DIR)
+ 	install -m 0755  lilo-uuid-diskid  $$DESTDIR$(USRSBIN_DIR)
+ 
+ clean:
+diff -Nru lilo-23.2.orig/src/Makefile lilo-23.2/src/Makefile
+--- lilo-23.2.orig/src/Makefile	2011-04-10 09:21:37.203535242 +0200
++++ lilo-23.2/src/Makefile	2011-04-10 09:21:51.399684961 +0200
+@@ -48,7 +48,7 @@
+ #
+ # everything needed to run, just short of installation
+ #
+-all:	lilo bootsect.b
++all:	lilo 
+ 
+ #
+ # everything above plus the statically linked version
+@@ -245,7 +245,6 @@
+ 
+ 	cp lilo $$DESTDIR$(SBIN_DIR)/lilo
+ 	strip $$DESTDIR$(SBIN_DIR)/lilo
+-	cp ../mkrescue $$DESTDIR$(USRSBIN_DIR)/mkrescue
+ 	cp ../keytab-lilo.pl $$DESTDIR$(USRSBIN_DIR)/keytab-lilo
+ 
+ dep:

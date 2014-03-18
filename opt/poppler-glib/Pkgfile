@@ -1,0 +1,27 @@
+# Description: GLib-based shared library for poppler
+# URL:         http://poppler.freedesktop.org/
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  glib poppler
+
+name=poppler-glib
+version=0.20.5
+release=1
+source=(http://poppler.freedesktop.org/poppler-$version.tar.gz)
+
+build() {
+    cd poppler-$version
+
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --enable-{zlib,libjpeg,libpng,cms} \
+                --disable-utils \
+                --disable-gtk-test \
+                --disable-poppler-{qt4,cpp}
+
+    make
+    make DESTDIR=$PKG install
+
+    rm -r $PKG/usr/share
+    rm $PKG/usr/lib/pkgconfig/poppler{,-cairo,-splash}.pc
+    rm $PKG/usr/lib/libpoppler.*
+}

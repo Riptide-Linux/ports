@@ -1,0 +1,6 @@
+#!/bin/sh
+
+getent group unbound || /usr/sbin/groupadd -g 41 unbound
+getent passwd unbound || /usr/sbin/useradd -g unbound -u 41 -d /etc/unbound -s /bin/false unbound
+/usr/bin/passwd -l unbound
+

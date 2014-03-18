@@ -1,0 +1,20 @@
+# Description: RSS/Atom feed reader for text terminals
+# URL:         http://www.newsbeuter.org/
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  curl libxml2 sqlite3 stfl json-c
+
+name=newsbeuter
+version=2.5
+release=2
+source=(http://www.newsbeuter.org/downloads/$name-$version.tar.gz
+        $name-$version-gcc47.patch)
+
+build () {
+    cd $name-$version
+    patch -p1 -i $SRC/$name-$version-gcc47.patch
+    export prefix=/usr mandir=/usr/man
+    ./config.sh
+    make
+    make DESTDIR=$PKG install
+    rm -r $PKG/usr/share
+}

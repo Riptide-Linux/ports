@@ -1,0 +1,8 @@
+#!/bin/sh
+
+getent group dovecot   || /usr/sbin/groupadd -g 26 dovecot
+getent passwd dovecot  || /usr/sbin/useradd  -g dovecot -u 26 -d /var/run/dovecot -s /bin/false dovecot
+getent passwd dovenull || /usr/sbin/useradd  -g dovecot -u 27 -d /var/run/dovecot -s /bin/false dovenull
+/usr/bin/passwd -l dovecot
+/usr/bin/passwd -l dovenull
+

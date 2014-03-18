@@ -1,0 +1,31 @@
+# Description: The /proc file system utilities
+# URL:         http://gitorious.org/procps
+# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Depends on:  ncurses
+
+name=procps
+version=3.3.4
+release=1
+source=(http://ftp.de.debian.org/debian/pool/main/p/$name/${name}_$version.orig.tar.xz
+        sysctl.conf)
+
+build() {
+    cd $name-ng-$version
+
+    ./configure --prefix=/usr \
+                --exec-prefix=/ \
+                --libdir=/usr/lib \
+                --sysconfdir=/etc \
+                --mandir=/usr/man \
+                --disable-kill
+
+    make
+    make DESTDIR=$PKG install
+
+    install -d $PKG/{lib,etc}
+    mv $PKG/usr/lib/libprocps.so.* $PKG/lib
+    ln -sf ../../lib/$(readlink $PKG/lib/libprocps.so.0) $PKG/usr/lib/libprocps.so
+    install -m 0644 $SRC/sysctl.conf $PKG/etc/sysctl.conf
+
+    rm -r $PKG/usr/share
+}

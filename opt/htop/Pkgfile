@@ -1,0 +1,20 @@
+# Packager:     Simone Rota, sip at crux dot nu
+# Maintainer:   Thomas Penteker, tek at serverop dot de
+# Description:  an interactive process viewer
+# URL:          http://htop.sourceforge.net/
+# Depends on:   ncurses
+
+name=htop
+version=1.0.2
+release=1
+source=(http://downloads.sourceforge.net/project/htop/htop/$version/htop-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr --disable-nls --mandir=/usr/man
+    make
+    make DESTDIR=$PKG install
+   
+    rm -rf $PKG/usr/{include,lib}
+    rm -rf $PKG/usr/share/{applications,pixmaps,}
+}

@@ -1,0 +1,27 @@
+INSTALLATION
+
+	Once the grub2 port is installed, the boot loader itself can be installed
+	like so:
+
+	# grub-install /dev/<device>
+
+	For example, to install grub2 into the master boot record of the first
+	SCSI or SATA drive:
+
+	# grub-install /dev/sda
+
+	To install to the second partition of the first SCSI or SATA drive
+	instead of the MBR:
+
+	# grub-install /dev/sda2
+
+CONFIGURATION
+
+	A configuration menu file is required for grub2 to do more than display
+	a command line. It can be created automatically using the 'grub-mkconfig'
+	command like so:
+
+	# grub-mkconfig > /boot/grub/grub.cfg
+
+	It can also be created manually. A sample grub.cfg file is included in the
+	port.

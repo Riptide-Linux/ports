@@ -1,0 +1,24 @@
+# Description: Secure PinEntry Dialog
+# URL:         http://www.gnupg.org
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Packager:    Alan Mizrahi, alan at mizrahi dot com dot ve
+# Depends on:  pinentry, gtk
+
+name=pinentry-gtk2
+version=0.8.1
+release=1
+source=(ftp://ftp.gnupg.org/gcrypt/pinentry/pinentry-$version.tar.gz)
+
+build() {
+    cd pinentry-$version
+        
+    ./configure \
+      --prefix=/usr \
+      --disable-pinentry-{gtk,curses,qt,qt4} \
+      --enable-pinentry-gtk2
+    make
+    make DESTDIR=$PKG install
+
+    rm -rf $PKG/usr/share
+    rm $PKG/usr/bin/pinentry
+}

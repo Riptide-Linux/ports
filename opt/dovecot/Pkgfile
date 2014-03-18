@@ -1,0 +1,43 @@
+# Description: IMAP and POP3 server with ssl/ipv6 support, written with security primarily in mind
+# URL:         http://dovecot.org
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  zlib bzip2 openssl tcp_wrappers libcap
+
+name=dovecot
+version=2.1.13
+release=1
+source=(http://dovecot.org/releases/2.1/$name-$version.tar.gz \
+        dovecot-config.patch dovecot)
+
+build () {
+    cd $name-$version
+
+    patch -p1 -i $SRC/$name-config.patch
+
+    ./configure --prefix=/usr \
+                --libexecdir=/usr/lib \
+                --sysconfdir=/etc \
+                --localstatedir=/var \
+                --mandir=/usr/man \
+                --with-moduledir=/usr/lib/dovecot/modules \
+                --with-ssl=openssl \
+                --with-libwrap
+
+    make
+    make DESTDIR=$PKG install
+
+    cp -r $PKG/usr/share/doc/dovecot/example-config/* $PKG/etc/dovecot
+    install -D -m 755 $SRC/dovecot $PKG/etc/rc.d/dovecot
+
+    rm -r $PKG/usr/share/doc
+    rm $PKG/etc/dovecot/README
+
+    install -d $PKG/etc/ssl/{certs,keys}
+    touch $PKG/etc/ssl/certs/dovecot.crt
+    touch $PKG/etc/ssl/keys/dovecot.key
+    chmod 0600 $PKG/etc/ssl/{keys/dovecot.key,certs/dovecot.crt}
+
+    install -d -m 0750 $PKG/var/lib/dovecot
+    install -d -m 0755 $PKG/var/run/dovecot
+    install -d -m 0750 -o root -g dovecot $PKG/var/run/dovecot/login
+}

@@ -1,0 +1,25 @@
+# Description: QT4-based shared library for poppler
+# URL:         http://poppler.freedesktop.org/
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  qt4 poppler
+
+name=poppler-qt4
+version=0.20.5
+release=1
+source=(http://poppler.freedesktop.org/poppler-$version.tar.gz)
+
+build() {
+    cd poppler-$version
+
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --enable-{zlib,libjpeg,libpng,cms} \
+                --disable-utils \
+                --disable-poppler-{glib,cpp}
+
+    make
+    make DESTDIR=$PKG install
+
+    rm $PKG/usr/lib/pkgconfig/poppler{,-cairo,-splash}.pc
+    rm $PKG/usr/lib/libpoppler.*
+}

@@ -1,0 +1,19 @@
+# Description: A collection of utilites for controlling TCP/IP networking and traffic in Linux
+# URL:         http://www.linuxfoundation.org/collaborate/workgroups/networking/iproute2
+# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Depends on:  db iptables
+
+name=iproute2
+version=3.7.0
+release=2
+source=(http://www.kernel.org/pub/linux/utils/net/$name/$name-$version.tar.xz \
+        net.iproute2)
+
+build() {
+    cd $name-$version
+    ./configure
+    make CCOPTS="$CFLAGS"
+    make MANDIR=/usr/man DESTDIR=$PKG install
+    rm -r $PKG/usr/share
+    install -D -m 0755 $SRC/net.iproute2 $PKG/etc/rc.d/net
+}

@@ -1,0 +1,31 @@
+# Description: A set of utilities for converting to/from the netpbm (and related) formats.
+# URL: http://netpbm.sourceforge.net/
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Antti Nykanen, aon at iki dot fi
+# Depends on: libpng libtiff libxml2
+# Optional: xorg-libx11
+
+name=netpbm
+version=10.57.00
+release=1
+source=(http://www.hvlinux.net/crux/distfiles/$name/$name-$version.tar.bz2
+	config.mk netpbm-10.34-build.patch)
+
+build() {
+	cd $name-$version
+
+	unset MAKEFLAGS
+	patch -p 1 -i $SRC/netpbm-10.34-build.patch
+
+	sed -e "s|#CFLAGS#|$CFLAGS|" $SRC/config.mk > config.mk
+	sed -i -e 's/\(.*\$(SYMLINK) \)\(pnmtopnm\)\(\$(EXE) \)\(pamtopnm\)/\1\4\3\2/' \
+		converter/other/Makefile
+
+	make
+	make pkgdir=$PKG/usr package
+
+	install -d $PKG/usr/share
+	mv $PKG/usr/misc $PKG/usr/share/netpbm
+
+	rm -r $PKG/usr/{README,VERSION,link,man,config_template,pkginfo,bin/doc.url}
+}

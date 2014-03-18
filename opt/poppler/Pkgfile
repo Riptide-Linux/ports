@@ -1,0 +1,23 @@
+# Description: PDF rendering library based on xpdf 3.0
+# URL:         http://poppler.freedesktop.org/
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Packager:    Matt Housh, jaeger at crux dot nu
+# Depends on:  cairo lcms
+
+name=poppler
+version=0.20.5
+release=1
+source=(http://poppler.freedesktop.org/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --enable-{zlib,libjpeg,libpng,cms} \
+                --enable-xpdf-headers \
+                --disable-poppler-{glib,qt4}
+
+    make
+    make DESTDIR=$PKG install
+}

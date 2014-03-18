@@ -1,0 +1,14 @@
+# Description: programmable bash completion for subversion
+# URL: http://subversion.apache.org
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Packager: Mathias Herzog, mathu at gmx dot ch
+# Depends on: bash-completion subversion 
+
+name=subversion-bashcompletion
+version=1.7.7
+release=1
+source=(http://svn.apache.org/repos/asf/subversion/tags/$version/tools/client-side/bash_completion)
+
+build() {
+  install -D -m 755 bash_completion $PKG/usr/lib/bash-completion/subversion_complete
+}

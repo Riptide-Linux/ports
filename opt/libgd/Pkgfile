@@ -1,0 +1,17 @@
+# Description: gd libraries
+# URL: http://www.libgd.org
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Packager: Antti Nykanen, aon at iki dot fi
+# Depends on: xorg-libxpm libpng libjpeg freetype
+
+name=libgd
+version=2.0.35
+release=2
+source=(http://google-desktop-for-linux-mirror.googlecode.com/files/gd-$version.tar.gz)
+
+build () {
+	cd gd/$version
+	chmod a+x configure
+	./configure --prefix=/usr
+	make DESTDIR=$PKG install
+}

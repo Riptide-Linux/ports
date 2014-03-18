@@ -1,0 +1,16 @@
+# Description: Terminal multiplexer like screen
+# URL:         http://sourceforge.net/projects/tmux 
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  ncurses libevent
+
+name=tmux
+version=1.7
+release=1
+source=(http://downloads.sourceforge.net/project/$name/$name/$name-$version/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+    ./configure --prefix=/usr --mandir=/usr/man
+    make
+    make DESTDIR=$PKG install
+}

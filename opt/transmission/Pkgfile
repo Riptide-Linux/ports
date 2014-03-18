@@ -1,0 +1,24 @@
+# Description: BitTorrent client/daemon with command-line and web user interface
+# URL:         http://transmission.m0k.org/
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  curl libevent
+
+name=transmission
+version=2.74
+release=1
+source=(http://download.m0k.org/$name/files/$name-$version.tar.xz)
+
+build() {
+    cd $name-$version
+
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --disable-nls \
+                --enable-cli \
+                --enable-daemon \
+                --without-gtk
+    make
+    make DESTDIR=$PKG install
+
+    rm $PKG/usr/share/transmission/web/LICENSE
+}

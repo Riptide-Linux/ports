@@ -1,0 +1,30 @@
+# Description: Outline and bitmap font editor.
+# URL: http://fontforge.sourceforge.net
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Antti Nykanen, aon at iki dot fi
+# Depends on: freetype libpng libspiro libtiff giflib libuninameslist util-linux xorg-libxi xorg-libxkbui xz
+
+name=fontforge
+version=20120731-b
+release=3
+source=(http://downloads.sourceforge.net/project/$name/$name-source/fontforge_full-$version.tar.bz2)
+
+build() {
+	cd $name-$version
+
+	export LDFLAGS="$LDFLAGS $(pkg-config libpng --libs)"
+
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/man \
+		--enable-type3 \
+		--enable-devicetables \
+		--enable-double \
+		--with-regular-link \
+		--enable-pyextension
+
+	make
+	make install DESTDIR=$PKG
+
+	rm -r $PKG/usr/share/locale
+}

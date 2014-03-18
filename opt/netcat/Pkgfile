@@ -1,0 +1,19 @@
+# Description: Read and write data across network connections
+# URL: http://netcat.sourceforge.net
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Packager: Antti Nykanen, aon at iki dot fi
+# Depends on:
+
+name=netcat
+version=0.7.1
+release=2
+
+source=(http://download.sourceforge.net/netcat/netcat-0.7.1.tar.bz2)
+
+build() {
+	cd $name-$version
+	./configure --prefix=/usr
+	make
+	make DESTDIR=$PKG install
+	rm -rf $PKG/usr/{share,info}
+}

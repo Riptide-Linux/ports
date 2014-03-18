@@ -1,0 +1,59 @@
+# Description: WINE - Implementation of Windows DLL's and core.
+# URL: http://www.winehq.com/
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Daniel Walpole, daniel at walpole dot id dot au
+# Depends on: fontconfig-32 freeglut-32 xorg-libxcomposite-32 xorg-libxcursor-32 xorg-libxinerama-32 xorg-libxrandr-32 xorg-libxxf86dga-32 alsa-lib-32 libpng-32 libjpeg-32 prelink
+
+name=wine
+version=1.5.21
+release=1
+source=(http://downloads.sourceforge.net/wine/$name-$version.tar.bz2
+	http://downloads.sourceforge.net/wine/wine_gecko-1.8-x86.msi
+	http://downloads.sourceforge.net/wine/wine_gecko-1.8-x86_64.msi
+	http://downloads.sourceforge.net/wine/wine-mono-0.0.8.msi)
+
+build() {
+	install -d wine32 wine64
+
+	cd wine64
+
+	../$name-$version/configure \
+		--prefix=/usr \
+		--libdir=/usr/lib \
+		--mandir=/usr/man \
+		--enable-win64
+
+	make depend
+	make
+	make DESTDIR=$PKG install
+
+	cd ../wine32
+	CFLAGS="${CFLAGS} -m32"
+	CXXFLAGS="${CXXFLAGS} -m32"
+	LDFLAGS="${LDFLAGS} -m32"
+	export PKG_CONFIG_LIBDIR="/usr/lib32/pkgconfig"
+
+	../$name-$version/configure \
+		--prefix=/usr \
+		--mandir=/usr/man \
+		--libdir=/usr/lib32 \
+		--x-includes=/usr/include/X11 \
+		--x-libraries=/usr/lib32 \
+		--cache-file=config.cache \
+		--with-wine64=../wine64
+
+	make depend
+	make
+	make DESTDIR=$PKG install
+
+	install -d $PKG/usr/share/wine/gecko
+	install -d $PKG/usr/share/wine/mono
+
+	install -t $PKG/usr/share/wine/gecko/ \
+		$SRC/wine_gecko-1.8-x86.msi \
+		$SRC/wine_gecko-1.8-x86_64.msi
+
+	install $SRC/wine-mono-0.0.8.msi $PKG/usr/share/wine/mono/
+
+	rm -r $PKG/usr/man/??.UTF-8
+}

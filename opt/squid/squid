@@ -1,0 +1,38 @@
+#!/bin/sh
+#
+# /etc/rc.d/squid: start/stop squid daemon
+#
+
+SQUID=/usr/sbin/squid
+
+wait_until_down() {
+	while [[ $(pidof $SQUID) ]]; do
+		sleep 1
+	done
+}
+
+case $1 in
+start)
+	$SQUID -Y
+	;;
+stop)
+	$SQUID -k interrupt
+	;;
+shutdown)
+	$SQUID -k shutdown
+	wait_until_down
+	;;
+reload)
+	$SQUID -k reconfigure
+	;;
+restart)
+	$0 stop
+	wait_until_down
+	$0 start
+	;;
+*)
+	echo "usage: $0 [start|stop|shutdown|reload|restart]"
+	;;
+esac
+
+# End of file

@@ -1,0 +1,79 @@
+commit a465b31a478ba16b423d7e3b5cea5476b80d769c
+Author: Andreas Krennmair <ak@synflood.at>
+Date:   Tue May 8 13:01:19 2012 +0200
+
+    apply patch from http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=667296 to fix gcc 4.7 compilation issues.
+
+diff --git a/src/controller.cpp b/src/controller.cpp
+index 11d59f2..7cfbf6f 100644
+--- a/src/controller.cpp
++++ b/src/controller.cpp
+@@ -30,6 +30,7 @@
+ #include <ctime>
+ #include <cassert>
+ #include <signal.h>
++#include <unistd.h>
+ #include <sys/utsname.h>
+ #include <langinfo.h>
+ #include <libgen.h>
+diff --git a/src/google_api.cpp b/src/google_api.cpp
+index 0153a78..75af379 100644
+--- a/src/google_api.cpp
++++ b/src/google_api.cpp
+@@ -7,6 +7,8 @@
+ #include <config.h>
+ #include <utils.h>
+ 
++#include <unistd.h>
++
+ #include <curl/curl.h>
+ 
+ #define GREADER_LOGIN					"https://www.google.com/accounts/ClientLogin"
+diff --git a/src/pb_controller.cpp b/src/pb_controller.cpp
+index 2524fa2..472a124 100644
+--- a/src/pb_controller.cpp
++++ b/src/pb_controller.cpp
+@@ -12,6 +12,7 @@
+ #include <pwd.h>
+ #include <cstdlib>
+ #include <signal.h>
++#include <unistd.h>
+ 
+ #include <keymap.h>
+ #include <configcontainer.h>
+diff --git a/src/queueloader.cpp b/src/queueloader.cpp
+index 03b6207..0cbba26 100644
+--- a/src/queueloader.cpp
++++ b/src/queueloader.cpp
+@@ -8,6 +8,8 @@
+ #include <config.h>
+ #include <libgen.h>
+ 
++#include <unistd.h>
++
+ using namespace newsbeuter;
+ 
+ namespace podbeuter {
+diff --git a/src/reloadthread.cpp b/src/reloadthread.cpp
+index a405a73..dcf41e9 100644
+--- a/src/reloadthread.cpp
++++ b/src/reloadthread.cpp
+@@ -1,5 +1,6 @@
+ #include <reloadthread.h>
+ #include <logger.h>
++#include <unistd.h>
+ 
+ namespace newsbeuter {
+ 
+diff --git a/src/utils.cpp b/src/utils.cpp
+index e465564..ee6321a 100644
+--- a/src/utils.cpp
++++ b/src/utils.cpp
+@@ -11,6 +11,7 @@
+ #include <libgen.h>
+ #include <sys/utsname.h>
+ 
++#include <unistd.h>
+ #include <sstream>
+ #include <locale>
+ #include <cwchar>

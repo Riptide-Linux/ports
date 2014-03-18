@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# /etc/rc.d/mailman: start/stop mailman daemon
+#
+
+PYTHON=/usr/bin/python
+MAILMANHOME=/usr/lib/mailman
+MAILMANCTL=$MAILMANHOME/bin/mailmanctl
+
+case $1 in
+  start)
+    $PYTHON $MAILMANCTL -s -q start
+    ;;
+  stop)
+    $PYTHON $MAILMANCTL -q stop
+    ;;
+  restart)
+    $PYTHON $MAILMANCTL -q restart
+    ;;
+  *)
+    echo "usage: $0 [start|stop|restart]"
+    ;;
+esac
+
+# End of file

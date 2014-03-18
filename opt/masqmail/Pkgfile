@@ -1,0 +1,35 @@
+# Description: Mail Transfer Agent for workstations and local networks 
+# URL:         http://marmaro.de/prog/masqmail/
+# Maintainer:  Juergen Daubert, juergen dot daubert at t-online dot de
+# Depends on:  glib
+
+name=masqmail
+version=0.3.4
+release=2
+source=(http://marmaro.de/prog/masqmail/files/$name-$version.tar.gz
+        masqmail)
+
+build () {
+    cd $name-$version
+
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --with-user=mail \
+                --with-group=mail
+    make
+    make DESTDIR=$PKG install
+
+    ln -s masqmail $PKG/usr/sbin/sendmail
+    ln -s ../sbin/masqmail $PKG/usr/bin/mailq
+
+    install -m 644 examples/* $PKG/etc/masqmail
+    install -D -m 755 $SRC/masqmail $PKG/etc/rc.d/masqmail
+
+    install -d -o mail -g mail $PKG/var/{log,lock,spool}/masqmail
+    touch $PKG/var/log/masqmail/{masqmail,debug}.log
+    chown mail:mail $PKG/var/log/masqmail/*
+    chmod 1777 $PKG/var/lock
+
+    rm $PKG/usr/share/masqmail/tpl/*.tpl.*
+    rm -r $PKG/usr/share/doc
+}

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+mmuser="mailman"
+mmgroup="mailman"
+mmuserid=41
+mmgroupid=41
+mmhome="/usr/lib/mailman"
+
+# make sure the user/group exists or add if not exists
+/usr/bin/getent group $mmgroup || \
+	/usr/sbin/groupadd -g $mmgroupid $mmgroup
+
+/usr/bin/getent passwd $mmuser || \
+	/usr/sbin/useradd -s /sbin/nologin -d $mmhome -u $mmuserid -g $mmgroupid $mmuser
+
+# End of file

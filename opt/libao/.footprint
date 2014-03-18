@@ -1,0 +1,25 @@
+drwxr-xr-x	root/root	usr/
+drwxr-xr-x	root/root	usr/include/
+drwxr-xr-x	root/root	usr/include/ao/
+-rw-r--r--	root/root	usr/include/ao/ao.h
+-rw-r--r--	root/root	usr/include/ao/os_types.h
+-rw-r--r--	root/root	usr/include/ao/plugin.h
+drwxr-xr-x	root/root	usr/lib/
+drwxr-xr-x	root/root	usr/lib/ao/
+drwxr-xr-x	root/root	usr/lib/ao/plugins-4/
+-rwxr-xr-x	root/root	usr/lib/ao/plugins-4/libalsa.la
+-rwxr-xr-x	root/root	usr/lib/ao/plugins-4/libalsa.so
+-rwxr-xr-x	root/root	usr/lib/ao/plugins-4/liboss.la
+-rwxr-xr-x	root/root	usr/lib/ao/plugins-4/liboss.so
+-rwxr-xr-x	root/root	usr/lib/libao.la
+lrwxrwxrwx	root/root	usr/lib/libao.so -> libao.so.4.0.0
+lrwxrwxrwx	root/root	usr/lib/libao.so.4 -> libao.so.4.0.0
+-rwxr-xr-x	root/root	usr/lib/libao.so.4.0.0
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/ao.pc
+drwxr-xr-x	root/root	usr/man/
+drwxr-xr-x	root/root	usr/man/man5/
+-rw-r--r--	root/root	usr/man/man5/libao.conf.5.gz
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/aclocal/
+-rw-r--r--	root/root	usr/share/aclocal/ao.m4

@@ -1,0 +1,23 @@
+# Description: Java 2 Runtime Kit
+# URL:         http://java.sun.com
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Arch Maintainer: Predrag Ivanovic, predivan at open dot telekom dot rs
+# Packager:    Simone Rota, sip at crux dot nu
+
+name=jre
+version=1.7.0_10
+release=1
+source=(file:///$name-7u10-linux-x64.tar.gz)
+
+build(){
+    cd $name$version
+
+    install -d $PKG/usr/{bin,man,lib/$name$version}
+    mv man/man1 $PKG/usr/man
+    mv bin lib plugin  $PKG/usr/lib/$name$version
+    
+    ln -s $name$version $PKG/usr/lib/java
+    ln -s ../lib/java/bin/java $PKG/usr/bin/java
+    ln -s ../lib/java/bin/javaws $PKG/usr/bin/javaws
+    ln -s ../lib/java/bin/keytool $PKG/usr/bin/keytool
+}

@@ -1,0 +1,24 @@
+# Description: A programming language designed for extending applications.
+# URL: http://www.lua.org/
+# Maintainer: Danny Rawlins, monster dot romster at gmail dot com
+# Packager: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: readline
+
+name=lua
+version=5.2.1
+release=2
+source=(http://www.lua.org/ftp/$name-$version.tar.gz
+	$name.diff)
+
+build() {
+	cd $name-$version
+
+	patch -Np1 -i $SRC/$name.diff
+	export CFLAGS="$CFLAGS -fPIC"
+
+	make linux
+	make INSTALL_TOP=$PKG/usr install
+
+	make pc > lua.pc
+	install -D -m 0644 lua.pc $PKG/usr/lib/pkgconfig/lua.pc
+}

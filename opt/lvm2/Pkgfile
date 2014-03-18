@@ -1,0 +1,31 @@
+# Description: Userspace toolset for logical volume management
+# URL:         http://sourceware.org/lvm2/
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  libdevmapper
+
+name=lvm2
+version=2.02.98
+release=1
+source=(ftp://sources.redhat.com/pub/lvm2/releases/LVM2.$version.tgz)
+
+build() {
+    cd LVM2.$version
+
+    ./configure --prefix=/usr \
+		--exec-prefix= \
+		--datarootdir=/usr \
+		--with-udev-prefix= \
+		--disable-readline \
+		--enable-pkgconfig \
+		--enable-static_link \
+		--enable-udev_sync \
+		--enable-udev_rules \
+		--with-{user,group}=root
+
+    make
+    make DESTDIR=$PKG install_lvm2
+
+    install -d -m 0700 $PKG/etc/lvm/{archive,backup}
+    install -d -m 1777 $PKG/var/lock
+    install -d -m 0700 $PKG/var/lock/lvm
+}

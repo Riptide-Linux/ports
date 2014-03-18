@@ -1,0 +1,24 @@
+#!/bin/sh
+#
+# /etc/rc.d/crond: start/stop unbound daemon
+#
+
+case $1 in
+start)
+	/usr/sbin/unbound-anchor
+	/usr/sbin/unbound
+	;;
+stop)
+	killall -q /usr/sbin/unbound
+	;;
+restart)
+	$0 stop
+	sleep 2
+	$0 start
+	;;
+*)
+	echo "usage: $0 [start|stop|restart]"
+	;;
+esac
+
+# End of file

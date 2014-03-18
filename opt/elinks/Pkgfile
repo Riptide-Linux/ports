@@ -1,0 +1,23 @@
+# Description: Enhanced version of the links textmode WWW browser with frame/table support 
+# URL:         http://elinks.or.cz/
+# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Depends on:  openssl, zlib
+
+name=elinks
+version=0.12pre6
+release=1
+source=(http://elinks.or.cz/download/$name-$version.tar.bz2)
+
+build () {
+    cd $name-$version
+    ./configure --prefix=/usr \
+                --mandir=/usr/man \
+                --sysconfdir=/usr/etc \
+                --enable-256-colors \
+                --enable-html-highlight \
+                --disable-nls \
+                --without-{zlib,bzlib}
+    make
+    make DESTDIR=$PKG install
+    ln -s elinks $PKG/usr/bin/links
+}
