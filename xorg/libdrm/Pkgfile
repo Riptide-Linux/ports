@@ -1,0 +1,24 @@
+# Description: Userspace interface to kernel DRM services
+# URL: http://dri.freedesktop.org/
+# Maintainer: CRUX Xorg Team, xorg-ports at crux dot nu
+# Depends on: libpthread-stubs xorg-libpciaccess 
+
+name=libdrm
+version=2.4.52
+release=2
+source=(http://dri.freedesktop.org/libdrm/libdrm-$version.tar.bz2
+	drm-header-path.patch)
+
+build() {
+	cd $name-$version
+	patch -p 1 -i $SRC/drm-header-path.patch
+
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/man \
+		--disable-manpages \
+		--disable-cairo-tests
+
+	make
+	make DESTDIR=$PKG install
+}

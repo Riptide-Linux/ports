@@ -1,0 +1,18 @@
+# Description: xorg lib libXpm
+# URL: http://xorg.freedesktop.org
+# Maintainer: CRUX Xorg Team, xorg-ports at crux dot nu
+# Depends on: xorg-xproto, xorg-libx11, xorg-libxt, xorg-xextproto, xorg-libxext
+
+name=xorg-libxpm
+version=3.5.11
+release=1
+source=(http://xorg.freedesktop.org/releases/individual/lib/libXpm-$version.tar.bz2)
+
+build() {
+	cd libXpm-$version
+
+	./configure --prefix=/usr --mandir=/usr/man
+
+	make
+	make DESTDIR=$PKG install
+}

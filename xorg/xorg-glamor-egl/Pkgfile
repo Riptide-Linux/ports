@@ -1,0 +1,16 @@
+# Description: GL-based rendering acceleration library for X server
+# URL: http://www.freedesktop.org/wiki/Software/Glamor/
+# Maintainer: CRUX Xorg Team, xorg-ports at crux dot nu
+# Depends on: mesa3d, xorg-libxcb
+
+name=xorg-glamor-egl
+version=0.6.0
+release=1
+source=(http://xorg.freedesktop.org/releases/individual/driver/glamor-egl-$version.tar.bz2)
+
+build() {
+	cd glamor-egl-$version
+	./configure --prefix=/usr --enable-glx-tls
+	make
+	make DESTDIR=$PKG install
+}

@@ -1,0 +1,18 @@
+# Description: X11 XFree86 video mode extension library
+# URL: http://xorg.freedesktop.org
+# Maintainer: CRUX Xorg Team, xorg-ports at crux dot nu
+# Depends on: xorg-xproto, xorg-libx11, xorg-libxext, xorg-xf86vidmodeproto
+
+name=xorg-libxxf86vm
+version=1.1.3
+release=1
+source=(http://xorg.freedesktop.org/releases/individual/lib/libXxf86vm-$version.tar.bz2)
+
+build() {
+	cd libXxf86vm-$version
+
+	./configure --prefix=/usr --mandir=/usr/man
+
+	make
+	make DESTDIR=$PKG install
+}

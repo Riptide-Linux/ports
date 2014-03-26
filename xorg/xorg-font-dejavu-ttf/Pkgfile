@@ -1,0 +1,22 @@
+# Description: A font family based on the Bitstream Vera Fonts
+# URL: http://dejavu-fonts.org
+# Maintainer: Jose V Beneyto, sepen at crux dot nu
+# Packager: Tilman Sauerbeck, tilman at crux dot nu
+# Depends on: xorg-mkfontdir, xorg-mkfontscale, fontconfig
+
+name=xorg-font-dejavu-ttf
+version=2.33
+release=1
+source=(http://downloads.sourceforge.net/project/dejavu/dejavu/$version/dejavu-fonts-ttf-$version.tar.bz2)
+
+build() {
+    cd dejavu-fonts-ttf-$version
+
+    install -d -m 0755 $PKG/usr/share/fonts/X11/TTF
+    install -m 0644 ttf/*.ttf $PKG/usr/share/fonts/X11/TTF
+
+    install -d -m 0755 $PKG/etc/fonts/conf.{d,avail}
+    install -m 0644 fontconfig/*.conf $PKG/etc/fonts/conf.avail
+    cd $PKG/etc/fonts/conf.d
+    ln -s ../conf.avail/* .
+}
