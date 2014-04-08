@@ -1,6 +1,7 @@
 # Description: A package of M4 macros to produce scripts to automatically configure sourcecode
 # URL:         http://www.gnu.org/software/autoconf
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide-devel@googlegroups.com>
+# Last inspected: 8-4-2014
 
 name=autoconf
 version=2.69

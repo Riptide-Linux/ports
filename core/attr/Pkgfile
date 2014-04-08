@@ -1,6 +1,7 @@
 # Description: Extented attributes library
 # URL:         http://savannah.nongnu.org/projects/attr/
 # Maintainer:  Riptide Maintainers <riptide-devel@googlegroups.com>
+# Last inspected: 8-4-2014
 
 name=attr
 version=2.4.47

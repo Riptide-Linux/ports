@@ -2,6 +2,7 @@
 # URL:         http://savannah.nongnu.org/projects/acl
 # Maintainer:  Riptide Maintainers <riptide-devel@googlegroups.com>
 # Depends on:  attr
+# Last inspected: 8-4-2014
 
 name=acl
 version=2.2.52
