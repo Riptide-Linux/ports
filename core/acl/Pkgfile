@@ -1,10 +1,10 @@
 # Description: Access Control Lists library
 # URL:         http://savannah.nongnu.org/projects/acl
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide-devel@googlegroups.com>
 # Depends on:  attr
 
 name=acl
-version=2.2.51
+version=2.2.52
 release=1
 source=(http://download-mirror.savannah.gnu.org/releases/$name/$name-$version.src.tar.gz)
 
