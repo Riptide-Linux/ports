@@ -1,11 +1,12 @@
-# Description: The GNU Binutils are a collection of binary tools
-# URL:         http://sources.redhat.com/binutils/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
-# Arch Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
+# Description: The GNU Binutils are a collection of binary tools (assembler, linker, objdump, etc)
+# URL:         http://www.gnu.org/software/binutils
+# Maintainer:  Riptide Maintainers <riptide-devel@googlegroups.com>
+# Arch Maintainer: Fotis Koutoulakis <fotis.koutoulakis@gmail.com>
 # Depends on:  zlib
+# Last Inspected: 8-4-2014
 
 name=binutils
-version=2.23.1
+version=2.24
 release=1
 source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.bz2)
 
