@@ -1,6 +1,6 @@
 # Description: Very high-quality data compression program
 # URL: http://www.bzip.org/
-# Maintainer: Riptide Maintainers <riptide-devel@googlegroups.com>
+# Maintainer: Riptide Maintainers <riptide_devel@googlegroups.com>
 # Last inspected: 9-4-2014
 
 name=bzip2

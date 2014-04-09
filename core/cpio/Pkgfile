@@ -1,6 +1,6 @@
 # Description: A tool to copy files into or out of a cpio or tar archive
 # URL:         http://www.gnu.org/software/cpio/
-# Maintainer:  Riptide Maintainers <riptide-devel@googlegroups.com>
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Last inspected: 9-4-2014
 
 name=cpio

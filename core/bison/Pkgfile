@@ -1,6 +1,6 @@
 # Description: The GNU Project parser generator
 # URL:         http://www.gnu.org/software/bison/
-# Maintainer:  Riptide Maintainers <riptide-devel@googlegroups.com>
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Last inspected: 8-4-2014
 
 name=bison

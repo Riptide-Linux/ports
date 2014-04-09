@@ -1,6 +1,6 @@
 # Description: Ext2 Filesystem Utilities
 # URL:         http://e2fsprogs.sourceforge.net/
-# Maintainer:  Riptide Maintainers <riptide-devel@googlegroups.com>
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Depends on:  util-linux
 # Last inspected: 9-4-2014
 

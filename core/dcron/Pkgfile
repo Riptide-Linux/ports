@@ -1,6 +1,6 @@
 # Description: Multi-user cron daemon
 # URL:         http://www.jimpryor.net/linux/dcron.html
-# Maintainer:  Riptide Maintainers <riptide-devel@googlegroups.com>
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Last inspected: 9-4-2014
 
 name=dcron

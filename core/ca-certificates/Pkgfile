@@ -1,6 +1,6 @@
 # Description: Bundle of CA Root Certificates from Mozilla
 # URL:         http://curl.haxx.se/ca/
-# Maintainer:  Riptide Maintainers <riptide-devel@googlegroups.com>
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Last inspected: 9-4-2014
 
 name=ca-certificates

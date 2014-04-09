@@ -1,6 +1,6 @@
 # Description: A package of M4 macros to produce scripts to automatically configure sourcecode
 # URL:         http://www.gnu.org/software/autoconf
-# Maintainer:  Riptide Maintainers <riptide-devel@googlegroups.com>
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Last inspected: 8-4-2014
 
 name=autoconf

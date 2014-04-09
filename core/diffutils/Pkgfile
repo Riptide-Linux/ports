@@ -1,6 +1,6 @@
 # Description: Package with the GNU diff, diff3, sdiff, and cmp utilities
 # URL:         http://www.gnu.org/software/diffutils/
-# Maintainer:  Riptide Maintainers <riptide-devel@googlegroups.com>
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Last inspected: 9-4-2014
 
 name=diffutils

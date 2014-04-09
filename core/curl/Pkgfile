@@ -1,6 +1,6 @@
 # Description: A tool for transfering files with URL syntax
 # URL:         http://curl.haxx.se 
-# Maintainer:  Riptide Maintainers <riptide-devel@googlegroups.com>
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Depends on:  openssl, zlib
 # Last inspected: 9-4-2014
 

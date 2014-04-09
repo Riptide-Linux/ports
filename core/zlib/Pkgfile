@@ -1,6 +1,7 @@
 # Description: A compression/decompression Library
 # URL:         http://www.zlib.net/
-# Maintainer:  Riptide Maintainers <riptide-devel@googlegroups.com>
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
+# Last inspected: 9-4-2014
 
 name=zlib
 version=1.2.8

@@ -1,6 +1,6 @@
 # Description: A collection of core GNU utilities
 # URL:         http://www.gnu.org/software/coreutils/
-# Maintainer:  Riptide Maintainers <riptide-devel@googlegroups.com
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com
 # Depends on:  libgmp acl libcap
 # Last inspected: 9-4-2014
 

@@ -1,6 +1,6 @@
 # Description: Secure Sockets Layer and Transport Layer Security tools
 # URL:         http://www.openssl.org/
-# Maintainer:  Riptide Maintainers <riptide-devel@googlegroups.com>
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Last inspected: 8-4-2014
 
 name=openssl

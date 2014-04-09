@@ -1,6 +1,6 @@
 # Description: Lets users edit command lines as they are typed in
 # URL:         http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html
-# Maintainer:  Riptide Maintainers <riptide-devel@googlegroups.com>
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Depends on:  ncurses
 # Last inspected: 8-4-2014
 
