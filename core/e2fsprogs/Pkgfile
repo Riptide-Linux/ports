@@ -1,12 +1,13 @@
 # Description: Ext2 Filesystem Utilities
 # URL:         http://e2fsprogs.sourceforge.net/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide-devel@googlegroups.com>
 # Depends on:  util-linux
+# Last inspected: 9-4-2014
 
 name=e2fsprogs
-version=1.42.5
+version=1.42.9
 release=1
-source=(http://downloads.sourceforge.net/project/$name/$name/v$version/$name-$version.tar.gz)
+source=(https://www.kernel.org/pub/linux/kernel/people/tytso/$name/v$version/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
