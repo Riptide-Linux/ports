@@ -1,6 +1,7 @@
 # Description: Very high-quality data compression program
 # URL: http://www.bzip.org/
-# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Maintainer: Riptide Maintainers <riptide-devel@googlegroups.com>
+# Last inspected: 9-4-2014
 
 name=bzip2
 version=1.0.6
