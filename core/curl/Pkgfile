@@ -1,12 +1,13 @@
 # Description: A tool for transfering files with URL syntax
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
 # URL:         http://curl.haxx.se 
+# Maintainer:  Riptide Maintainers <riptide-devel@googlegroups.com>
 # Depends on:  openssl, zlib
+# Last inspected: 9-4-2014
 
 name=curl
-version=7.28.1
+version=7.36.0
 release=2
-source=(http://curl.haxx.se/download/$name-$version.tar.lzma)
+source=(http://curl.haxx.se/download/$name-$version.tar.gz)
 
 build() {
     cd $name-$version

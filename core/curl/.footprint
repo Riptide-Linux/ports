@@ -25,7 +25,6 @@ drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/curl-config.1.gz
 -rw-r--r--	root/root	usr/man/man1/curl.1.gz
--rw-r--r--	root/root	usr/man/man1/mk-ca-bundle.1.gz
 drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/curl_easy_cleanup.3.gz
 -rw-r--r--	root/root	usr/man/man3/curl_easy_duphandle.3.gz
@@ -81,3 +80,6 @@ drwxr-xr-x	root/root	usr/man/man3/
 -rw-r--r--	root/root	usr/man/man3/libcurl-share.3.gz
 -rw-r--r--	root/root	usr/man/man3/libcurl-tutorial.3.gz
 -rw-r--r--	root/root	usr/man/man3/libcurl.3.gz
+drwxr-xr-x	root/root	usr/share/
+drwxr-xr-x	root/root	usr/share/aclocal/
+-rw-r--r--	root/root	usr/share/aclocal/libcurl.m4
