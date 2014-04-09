@@ -1,25 +1,26 @@
 # Description: The GNU Compiler Collection
 # URL:         http://gcc.gnu.org
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
+# Arch Maintainer: Fotis Koutoulakis <fotis.koutoulakis@gmail.com>
 # Depends on:  zlib libmpc
+# Last inspected: 9-4-2014
 
 name=gcc
-version=4.7.2
+version=4.8.2
 release=1
 source=(ftp://gcc.gnu.org/pub/gcc/releases/$name-$version/$name-$version.tar.bz2 \
-	$name-nocheck-fixincludes.patch $name-$version-multilib-dirs.patch)
+	$name-$version-multilib-dirs.patch)
 
 
 build() {
-    patch -d $name-$version -p1 -i $SRC/$name-nocheck-fixincludes.patch
-	patch -d $name-$version -p1 -i $SRC/$name-$version-multilib-dirs.patch
+    patch -d $name-$version -p1 -i $SRC/$name-$version-multilib-dirs.patch
 
     mkdir build
     cd build
     ../$name-$version/configure --prefix=/usr \
                                 --mandir=/usr/man \
                                 --libexecdir=/usr/lib \
-                                --enable-languages=c,c++,objc \
+                                --enable-languages=c,c++ \
                                 --enable-threads=posix \
                                 --enable-__cxa_atexit \
                                 --enable-clocale=gnu \
@@ -28,7 +29,7 @@ build() {
                                 --with-x=no \
                                 --with-system-zlib \
                                 --enable-multilib \
-                                --with-pkgversion="CRUX-x86_64-multilib"
+                                --with-pkgversion="Riptide-x86_64-multilib"
     make bootstrap
     make -j1 DESTDIR=$PKG install
 
