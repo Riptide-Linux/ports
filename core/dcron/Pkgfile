@@ -1,6 +1,7 @@
 # Description: Multi-user cron daemon
 # URL:         http://www.jimpryor.net/linux/dcron.html
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide-devel@googlegroups.com>
+# Last inspected: 9-4-2014
 
 name=dcron
 version=4.5
