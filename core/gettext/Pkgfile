@@ -1,12 +1,13 @@
 # Description: The GNU internationalization library
 # URL:         http://www.gnu.org/software/gettext/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Depends on:  ncurses acl
+# Last inspected: 10-4-2014
 
 name=gettext
-version=0.18.2
+version=0.18.3.2
 release=1
-source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz)
+source=(http://ftp.gnu.org/pub/gnu/$name/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
