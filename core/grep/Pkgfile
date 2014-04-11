@@ -1,10 +1,11 @@
 # Description: GNU grep, egrep and fgrep
 # URL:         http://www.gnu.org/software/grep/grep.html
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Depends on:  libpcre
+# Last inspected: 11-4-2014
 
 name=grep
-version=2.14
+version=2.18
 release=1
 source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.xz)
 
