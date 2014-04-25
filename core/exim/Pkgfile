@@ -1,10 +1,11 @@
 # Description: Mail transfer agent
 # URL:         http://www.exim.org
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Depends on:  db openssl libpcre tcp_wrappers
+# Last inspected: 25-04-2014
 
 name=exim
-version=4.80.1
+version=4.82
 release=1
 source=(ftp://ftp.exim.org/pub/exim/exim4/$name-$version.tar.bz2 \
         $name $name-config.patch
