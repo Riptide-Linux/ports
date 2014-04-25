@@ -1,12 +1,13 @@
 # Description: File type identification utility
 # URL:         http://www.darwinsys.com/file/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Depends on:  zlib
+# Last inspected: 25-04-2014
 
 name=file
-version=5.12
+version=5.18
 release=1
-source=(ftp://ftp.fu-berlin.de/unix/tools/file/$name-$version.tar.gz)
+source=(ftp://ftp.astron.com/pub/$name/$name-$version.tar.gz)
 
 build() {
     cd $name-$version
