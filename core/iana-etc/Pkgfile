@@ -1,6 +1,7 @@
 # Description: Services and protocols files for /etc
 # URL: http://www.iana.org/
-# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Maintainer: Riptide Maintainers <riptide_devel@googlegroups.com>
+# Last inspected: 27-04-2014
 
 name=iana-etc
 version=2.4
