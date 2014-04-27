@@ -1,9 +1,10 @@
 # Description: Kernel module utilities and library
 # URL:         http://git.kernel.org/?p=utils/kernel/kmod/kmod.git
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
+# Last inspected: 27-04-2014
 
 name=kmod
-version=12
+version=17
 release=1
 source=(http://www.kernel.org/pub/linux/utils/kernel/$name/$name-$version.tar.xz)
 
