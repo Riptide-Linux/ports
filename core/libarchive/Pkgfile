@@ -1,12 +1,13 @@
 # Description: Library to create and read several archive formats
 # URL:         http://libarchive.github.com/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Depends on:  bzip2, xz, zlib, acl
+# Last inspected: 27-04-2014
 
 name=libarchive
-version=3.0.4
+version=3.1.2
 release=1
-source=(https://github.com/downloads/$name/$name/$name-$version.tar.gz)
+source=(http://www.libarchive.org/downloads/$name-$version.tar.gz)
 
 build() {
 	cd $name-$version
