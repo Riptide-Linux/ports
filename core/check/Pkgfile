@@ -1,0 +1,17 @@
+# Description: A unit testing framework for C
+# URL: 	       http://sourceforge.net/projects/check
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
+# Last inspected: 27-4-2014
+
+name=check
+version=0.9.12
+release=1
+source=(http://downloads.sourceforge.net/project/$name/$name/$version/$name-$version.tar.gz)
+
+build() {
+    cd $name-$version
+
+    ./configure --prefix=/usr --disable-static
+    make
+    make DESTDIR=$PKG install
+}
