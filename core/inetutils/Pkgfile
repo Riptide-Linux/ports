@@ -1,12 +1,13 @@
 # Description: Inetd daemon, FTP and telnet client
 # URL:         http://www.gnu.org/software/inetutils/inetutils.html
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Depends on:  readline
+# Last inspected: 27-04-2014
 
 name=inetutils
-version=1.9.1
-release=2
-source=(http://ftp.gnu.org/gnu/inetutils/inetutils-$version.tar.gz \
+version=1.9.2
+release=1
+source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.gz \
         inetd.conf inetd)
 
 build() {
