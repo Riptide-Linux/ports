@@ -1,12 +1,13 @@
 # Description: Basic networking applet
 # URL: http://www.linux-foundation.org/en/Net:Iputils
-# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Maintainer: Riptide Maintainers <riptide_devel@googlegroups.com>
 # Depends on: libcap openssl sysfsutils
+# Last inspected: 27-04-2014
 
 name=iputils
 version=s20121221
 release=1
-source=(http://www.skbuff.net/iputils/$name-$version.tar.bz2
+source=(http://www.skbuff.net/#$name/$name-$version.tar.bz2
         http://crux.nu/files/distfiles/$name-man-$version.tar.xz)
 
 build() {
