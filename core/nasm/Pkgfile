@@ -1,9 +1,10 @@
 # Description: 80x86 assembler
 # URL:         http://www.nasm.us/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
+# Last inspected: 29-04-2014
 
 name=nasm
-version=2.10.07
+version=2.11.02
 release=1
 source=(http://www.nasm.us/pub/nasm/releasebuilds/$version/$name-$version.tar.xz)
 
