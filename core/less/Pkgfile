@@ -1,10 +1,11 @@
 # Description: A terminal based program for viewing text files
 # URL:         http://www.greenwoodsoftware.com/less/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <ritpide_devel@googlegroups.com>
 # Depends on:  ncurses libpcre
+# Last inspected: 27-04-2014
 
 name=less
-version=451
+version=458
 release=1
 source=(http://www.greenwoodsoftware.com/less/$name-$version.tar.gz \
         filter)
