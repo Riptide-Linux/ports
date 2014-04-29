@@ -1,9 +1,10 @@
 # Description: A tool to trace the route of ip packets
 # URL:         http://traceroute.sourceforge.net/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
+# Last inspected: 29-04-2014
 
 name=traceroute
-version=2.0.18
+version=2.0.19
 release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$name-$version/$name-$version.tar.gz)
 
