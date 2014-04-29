@@ -1,10 +1,11 @@
 # Description: Secure SHell server and client tools
 # URL:         http://www.openssh.org/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintianers <riptide_devel@googlegroups.com 
 # Depends on:  openssl zlib tcp_wrappers
+# Last inspected: 29-04-2014
 
 name=openssh
-version=6.1p1
+version=6.6p1
 release=1
 source=(ftp://ftp.openbsd.org/pub/OpenBSD/OpenSSH/portable/$name-$version.tar.gz sshd)
 
