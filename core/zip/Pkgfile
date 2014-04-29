@@ -1,7 +1,8 @@
 # Description: Compression and file packaging/archive utility
 # URL:         http://infozip.sourceforge.net/Zip.html
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Depends on:  bzip2
+# Last inspected: 29-04-2014
 
 name=zip
 version=3.0
