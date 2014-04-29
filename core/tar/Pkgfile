@@ -1,9 +1,10 @@
 # Description: GNU tar
 # URL:         http://www.gnu.org/software/tar/tar.html
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com> 
+# Last inspected: 30-04-2014
 
 name=tar
-version=1.26
+version=1.27
 release=2
 source=(http://ftp.gnu.org/gnu/$name/$name-$version.tar.xz \
         $name-rootp.patch tar.1 rmt.8)
@@ -12,7 +13,7 @@ build() {
     cd $name-$version
     # fix for glibc 'gets' removal
     sed -i -e '/gets is a/d' gnu/stdio.in.h
-    patch -p1 -i $SRC/$name-rootp.patch
+    #patch -p1 -i $SRC/$name-rootp.patch
     ./configure --prefix= \
                 --libexec=/usr/lib/tar \
                 --disable-nls \
