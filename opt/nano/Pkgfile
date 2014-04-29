@@ -1,13 +1,14 @@
 # Description: GNU pico clone (a tiny text editor)
 # URL:         http://www.nano-editor.org
-# Maintainer:  Juergen Daubert, jue at crux dot nu
-# Packager:    Simone Rota, sip at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
+# Packager:    Riptide Maintainers <riptide_devel@googlegroups.com>
 # Depends on:  ncurses
+# Last inspected: 29-04-2014
 
 name=nano
-version=2.2.6
+version=2.3.2
 release=1
-source=(http://www.nano-editor.org/dist/v2.2/$name-$version.tar.gz)
+source=(http://www.nano-editor.org/dist/v2.3/$name-$version.tar.gz)
 
 build(){
     cd $name-$version
