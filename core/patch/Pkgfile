@@ -1,6 +1,7 @@
 # Description: GNU patch
 # URL:         http://www.gnu.org/software/patch/patch.html
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
+# Last inspected: 29-04-2014
 
 name=patch
 version=2.7.1
