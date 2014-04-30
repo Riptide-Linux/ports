@@ -1,12 +1,13 @@
 # Description: Shadow password file utilities
 # URL:         http://pkg-shadow.alioth.debian.org/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Depends on:  acl
+# Last inspected: 30-04-2014
 
 name=shadow
 version=4.1.5.1
 release=3
-source=(http://pkg-shadow.alioth.debian.org/releases/$name-$version.tar.bz2
+source=(http://cdn.debian.net/debian/pool/main/s/$name/shadow_$version.orig.tar.gz
         pwck login.defs)
 
 build() {
