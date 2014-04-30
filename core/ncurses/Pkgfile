@@ -1,6 +1,7 @@
 # Description: A System V Release 4.0 curses emulation library
 # URL:         http://www.gnu.org/software/ncurses/ncurses.html
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
+# Last inspected: 30-04-2014
 
 name=ncurses
 version=5.9
