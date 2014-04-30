@@ -1,13 +1,12 @@
 # Description: Miscellaneous system utilities
 # URL:         http://userweb.kernel.org/~kzak/util-linux-ng/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
-# Arch Maintainer: Fredrik Rinnestam, fredrik at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Depends on:  ncurses zlib
 
 name=util-linux
-version=2.22.2
+version=2.24.2
 release=1
-source=(http://ftp.kernel.org/pub/linux/utils/$name/v2.22/$name-$version.tar.xz)
+source=(http://ftp.kernel.org/pub/linux/utils/$name/v2.24/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
