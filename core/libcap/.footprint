@@ -1,6 +1,6 @@
 drwxr-xr-x	root/root	lib/
-lrwxrwxrwx	root/root	lib/libcap.so.2 -> libcap.so.2.22
--rw-r--r--	root/root	lib/libcap.so.2.22
+lrwxrwxrwx	root/root	lib/libcap.so.2 -> libcap.so.2.24
+-rw-r--r--	root/root	lib/libcap.so.2.24
 drwxr-xr-x	root/root	sbin/
 -rwxr-xr-x	root/root	sbin/capsh
 -rwxr-xr-x	root/root	sbin/getcap
@@ -12,7 +12,9 @@ drwxr-xr-x	root/root	usr/include/sys/
 -rw-r--r--	root/root	usr/include/sys/capability.h
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libcap.a
-lrwxrwxrwx	root/root	usr/lib/libcap.so -> ../../lib/libcap.so.2.22
+lrwxrwxrwx	root/root	usr/lib/libcap.so -> ../../lib/libcap.so.2.24
+drwxr-xr-x	root/root	usr/lib/pkgconfig/
+-rw-r--r--	root/root	usr/lib/pkgconfig/libcap.pc
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/capsh.1.gz
