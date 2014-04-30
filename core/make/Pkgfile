@@ -1,17 +1,16 @@
 # Description: Controls the generation of executables and other compile-related tasks
 # URL:         http://www.gnu.org/software/make/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
+# Last inspected: 01-05-2014
 
 name=make
-version=3.82
-release=3
-source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.bz2
-        $name-$version-bug_{30612,30653,30723}.patch)
+version=4.0
+release=1
+source=(ftp://ftp.gnu.org/gnu/$name/$name-$version.tar.bz2)
 
 build() {
     cd $name-$version
-    cat $SRC/$name-$version-*.patch | patch -p1
-    ./configure --prefix=/usr --mandir=/usr/man --disable-nls
+    ./configure --prefix=/usr --mandir=/usr/man --disable-nls --without-guile
     make
     make DESTDIR=$PKG install
     rm -r $PKG/usr/share
