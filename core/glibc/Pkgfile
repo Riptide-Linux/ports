@@ -1,6 +1,7 @@
 # Description: The C library used in the GNU system
 # URL:         http://www.gnu.org/software/libc/
 # Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com> 
+# Arch Maintainer: Manolis Fragkiskos Ragkousis <manolis837@gmail.com>
 # Last inspected: 01-05-2014
 
 name=glibc
