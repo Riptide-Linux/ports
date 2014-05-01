@@ -1,31 +1,19 @@
-# Description: Highly configurable text editor
+# Description: The ultimate text editor
 # URL:         http://www.vim.org/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
+# Arch Maintainer: Fotis Koutoulakis <fotis.koutoulakis@gmail.com>
 # Depends on:  ncurses acl
+# Last inspected: 01-05-2014
 
 name=vim
-version=7.3.754
+version=7.4
 release=1
-source=(ftp://ftp.vim.org/pub/vim/unix/vim-7.3.tar.bz2
-        http://crux.nu/files/distfiles/vim-7.3.001-050.xz
-        http://crux.nu/files/distfiles/vim-7.3.051-102.xz
-        http://crux.nu/files/distfiles/vim-7.3.103-154.xz
-        http://crux.nu/files/distfiles/vim-7.3.155-198.xz
-        http://crux.nu/files/distfiles/vim-7.3.199-260.xz
-        http://crux.nu/files/distfiles/vim-7.3.261-303.xz
-        http://crux.nu/files/distfiles/vim-7.3.304-353.xz
-        http://crux.nu/files/distfiles/vim-7.3.354-401.xz
-        http://crux.nu/files/distfiles/vim-7.3.402-470.xz
-        http://crux.nu/files/distfiles/vim-7.3.471-515.xz
-        http://crux.nu/files/distfiles/vim-7.3.516-600.xz
-        http://crux.nu/files/distfiles/vim-7.3.601-659.xz
-        http://crux.nu/files/distfiles/vim-7.3.660-712.xz
-        http://crux.nu/files/distfiles/vim-7.3.713-754.xz)
+source=(ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2)
 
 build () {
-    cd vim73/src
+    cd vim74/src
 
-    unxz -c $SRC/vim-7.3.*.xz | patch -p0 -d $SRC/vim73
+    echo '#define SYS_VIMRC_FILE "/etc/vimrc"' >> feature.h
 
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
@@ -39,7 +27,8 @@ build () {
     make VIMRTDIR= 
     make VIMRTDIR= DESTDIR=$PKG installvimbin installruntime installlinks
 
-    mv $PKG/usr/share/vim/vimrc_example.vim $PKG/usr/share/vim/vimrc
+    mkdir $PKG/usr/etc
+    cp $PKG/usr/share/vim/vimrc_example.vim $PKG/usr/etc/
     rm -r $PKG/usr/{man/man?/vimtutor*,share/vim/{tutor,macros}}
     rm $PKG/usr/share/vim/*/README.txt
     ln -sf vim $PKG/usr/bin/evim
