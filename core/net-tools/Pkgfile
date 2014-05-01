@@ -1,32 +1,19 @@
 # Description: Network utilities
 # URL:         http://www.tazenda.demon.co.uk/phil/net-tools/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
+# Last inspected: 01-05-2014
 
 name=net-tools
-version=1.60
-release=6
-source=(http://www.tazenda.demon.co.uk/phil/net-tools/$name-$version.tar.bz2 \
-	$name-$version-config.patch \
-	$name-$version-compile_fixes.patch \
-	$name-$version-arp.patch \
-	$name-$version-man.patch \
-	$name-$version-nameif.patch \
-	$name-$version-manydevs.patch \
-	$name-$version-virtualname.patch \
-	$name-$version-ipv6.patch \
-	$name-$version-miiioctl.patch)
+version=CVS_20101030
+release=1
+source=(http://anduin.linuxfromscratch.org/sources/BLFS/svn/n/$name-$version.tar.gz \
+	http://www.linuxfromscratch.org/patches/blfs/svn/$name-$version-remove_dups-1.patch)
 
 build() {
     cd $name-$version
-    patch -p1 < ../$name-$version-config.patch
-    patch -p1 < ../$name-$version-compile_fixes.patch
-    patch -p1 < ../$name-$version-arp.patch
-    patch -p1 < ../$name-$version-man.patch
-    patch -p1 < ../$name-$version-nameif.patch
-    patch -p1 < ../$name-$version-manydevs.patch
-    patch -p1 < ../$name-$version-virtualname.patch
-    patch -p1 < ../$name-$version-ipv6.patch
-    patch -p1 < ../$name-$version-miiioctl.patch
+
+    patch -Np1 -i ../$name-$version-remove_dups-1.patch
+    yes "" | make config
     make -j1 COPTS="$CFLAGS -D_GNU_SOURCE -Wall"
     make BASEDIR=$PKG mandir=/usr/man install
 }
