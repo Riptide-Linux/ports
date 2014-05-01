@@ -1,7 +1,8 @@
 # Description: Compatibility library for libusb 1.0
 # URL:         http://libusb.sourceforge.net/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com> 
 # Depends on:  libusb
+# Last inspected: 01-05-2014
 
 name=libusb-compat
 version=0.1.5

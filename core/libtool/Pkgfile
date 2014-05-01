@@ -1,6 +1,7 @@
 # Description: A generic library support script
 # URL:         http://www.gnu.org/software/libtool/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
+# Last inspected: 01-05-2014
 
 name=libtool
 version=2.4.2
