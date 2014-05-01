@@ -8,52 +8,52 @@ lrwxrwxrwx	root/root	etc/localtime -> ../usr/share/zoneinfo/UTC
 -rw-r--r--	root/root	etc/nsswitch.conf
 -rw-r--r--	root/root	etc/resolv.conf
 -rw-r--r--	root/root	etc/rpc
-drwxr-xr-x	root/root	lib/
--rwxr-xr-x	root/root	lib/ld-2.16.so
-lrwxrwxrwx	root/root	lib/ld-linux-x86-64.so.2 -> ld-2.16.so
--rwxr-xr-x	root/root	lib/libBrokenLocale-2.16.so
-lrwxrwxrwx	root/root	lib/libBrokenLocale.so.1 -> libBrokenLocale-2.16.so
--rwxr-xr-x	root/root	lib/libSegFault.so
--rwxr-xr-x	root/root	lib/libanl-2.16.so
-lrwxrwxrwx	root/root	lib/libanl.so.1 -> libanl-2.16.so
--rwxr-xr-x	root/root	lib/libc-2.16.so
-lrwxrwxrwx	root/root	lib/libc.so.6 -> libc-2.16.so
--rwxr-xr-x	root/root	lib/libcidn-2.16.so
-lrwxrwxrwx	root/root	lib/libcidn.so.1 -> libcidn-2.16.so
--rwxr-xr-x	root/root	lib/libcrypt-2.16.so
-lrwxrwxrwx	root/root	lib/libcrypt.so.1 -> libcrypt-2.16.so
--rwxr-xr-x	root/root	lib/libdl-2.16.so
-lrwxrwxrwx	root/root	lib/libdl.so.2 -> libdl-2.16.so
--rwxr-xr-x	root/root	lib/libm-2.16.so
-lrwxrwxrwx	root/root	lib/libm.so.6 -> libm-2.16.so
--rwxr-xr-x	root/root	lib/libmemusage.so
--rwxr-xr-x	root/root	lib/libnsl-2.16.so
-lrwxrwxrwx	root/root	lib/libnsl.so.1 -> libnsl-2.16.so
--rwxr-xr-x	root/root	lib/libnss_compat-2.16.so
-lrwxrwxrwx	root/root	lib/libnss_compat.so.2 -> libnss_compat-2.16.so
--rwxr-xr-x	root/root	lib/libnss_db-2.16.so
-lrwxrwxrwx	root/root	lib/libnss_db.so.2 -> libnss_db-2.16.so
--rwxr-xr-x	root/root	lib/libnss_dns-2.16.so
-lrwxrwxrwx	root/root	lib/libnss_dns.so.2 -> libnss_dns-2.16.so
--rwxr-xr-x	root/root	lib/libnss_files-2.16.so
-lrwxrwxrwx	root/root	lib/libnss_files.so.2 -> libnss_files-2.16.so
--rwxr-xr-x	root/root	lib/libnss_hesiod-2.16.so
-lrwxrwxrwx	root/root	lib/libnss_hesiod.so.2 -> libnss_hesiod-2.16.so
--rwxr-xr-x	root/root	lib/libnss_nis-2.16.so
-lrwxrwxrwx	root/root	lib/libnss_nis.so.2 -> libnss_nis-2.16.so
--rwxr-xr-x	root/root	lib/libnss_nisplus-2.16.so
-lrwxrwxrwx	root/root	lib/libnss_nisplus.so.2 -> libnss_nisplus-2.16.so
--rwxr-xr-x	root/root	lib/libpcprofile.so
--rwxr-xr-x	root/root	lib/libpthread-2.16.so
-lrwxrwxrwx	root/root	lib/libpthread.so.0 -> libpthread-2.16.so
--rwxr-xr-x	root/root	lib/libresolv-2.16.so
-lrwxrwxrwx	root/root	lib/libresolv.so.2 -> libresolv-2.16.so
--rwxr-xr-x	root/root	lib/librt-2.16.so
-lrwxrwxrwx	root/root	lib/librt.so.1 -> librt-2.16.so
--rwxr-xr-x	root/root	lib/libthread_db-1.0.so
-lrwxrwxrwx	root/root	lib/libthread_db.so.1 -> libthread_db-1.0.so
--rwxr-xr-x	root/root	lib/libutil-2.16.so
-lrwxrwxrwx	root/root	lib/libutil.so.1 -> libutil-2.16.so
+drwxr-xr-x	root/root	lib64/
+-rwxr-xr-x	root/root	lib64/ld-2.19.so
+lrwxrwxrwx	root/root	lib64/ld-linux-x86-64.so.2 -> ld-2.19.so
+-rwxr-xr-x	root/root	lib64/libBrokenLocale-2.19.so
+lrwxrwxrwx	root/root	lib64/libBrokenLocale.so.1 -> libBrokenLocale-2.19.so
+-rwxr-xr-x	root/root	lib64/libSegFault.so
+-rwxr-xr-x	root/root	lib64/libanl-2.19.so
+lrwxrwxrwx	root/root	lib64/libanl.so.1 -> libanl-2.19.so
+-rwxr-xr-x	root/root	lib64/libc-2.19.so
+lrwxrwxrwx	root/root	lib64/libc.so.6 -> libc-2.19.so
+-rwxr-xr-x	root/root	lib64/libcidn-2.19.so
+lrwxrwxrwx	root/root	lib64/libcidn.so.1 -> libcidn-2.19.so
+-rwxr-xr-x	root/root	lib64/libcrypt-2.19.so
+lrwxrwxrwx	root/root	lib64/libcrypt.so.1 -> libcrypt-2.19.so
+-rwxr-xr-x	root/root	lib64/libdl-2.19.so
+lrwxrwxrwx	root/root	lib64/libdl.so.2 -> libdl-2.19.so
+-rwxr-xr-x	root/root	lib64/libm-2.19.so
+lrwxrwxrwx	root/root	lib64/libm.so.6 -> libm-2.19.so
+-rwxr-xr-x	root/root	lib64/libmemusage.so
+-rwxr-xr-x	root/root	lib64/libnsl-2.19.so
+lrwxrwxrwx	root/root	lib64/libnsl.so.1 -> libnsl-2.19.so
+-rwxr-xr-x	root/root	lib64/libnss_compat-2.19.so
+lrwxrwxrwx	root/root	lib64/libnss_compat.so.2 -> libnss_compat-2.19.so
+-rwxr-xr-x	root/root	lib64/libnss_db-2.19.so
+lrwxrwxrwx	root/root	lib64/libnss_db.so.2 -> libnss_db-2.19.so
+-rwxr-xr-x	root/root	lib64/libnss_dns-2.19.so
+lrwxrwxrwx	root/root	lib64/libnss_dns.so.2 -> libnss_dns-2.19.so
+-rwxr-xr-x	root/root	lib64/libnss_files-2.19.so
+lrwxrwxrwx	root/root	lib64/libnss_files.so.2 -> libnss_files-2.19.so
+-rwxr-xr-x	root/root	lib64/libnss_hesiod-2.19.so
+lrwxrwxrwx	root/root	lib64/libnss_hesiod.so.2 -> libnss_hesiod-2.19.so
+-rwxr-xr-x	root/root	lib64/libnss_nis-2.19.so
+lrwxrwxrwx	root/root	lib64/libnss_nis.so.2 -> libnss_nis-2.19.so
+-rwxr-xr-x	root/root	lib64/libnss_nisplus-2.19.so
+lrwxrwxrwx	root/root	lib64/libnss_nisplus.so.2 -> libnss_nisplus-2.19.so
+-rwxr-xr-x	root/root	lib64/libpcprofile.so
+-rwxr-xr-x	root/root	lib64/libpthread-2.19.so
+lrwxrwxrwx	root/root	lib64/libpthread.so.0 -> libpthread-2.19.so
+-rwxr-xr-x	root/root	lib64/libresolv-2.19.so
+lrwxrwxrwx	root/root	lib64/libresolv.so.2 -> libresolv-2.19.so
+-rwxr-xr-x	root/root	lib64/librt-2.19.so
+lrwxrwxrwx	root/root	lib64/librt.so.1 -> librt-2.19.so
+-rwxr-xr-x	root/root	lib64/libthread_db-1.0.so
+lrwxrwxrwx	root/root	lib64/libthread_db.so.1 -> libthread_db-1.0.so
+-rwxr-xr-x	root/root	lib64/libutil-2.19.so
+lrwxrwxrwx	root/root	lib64/libutil.so.1 -> libutil-2.19.so
 drwxr-xr-x	root/root	sbin/
 -rwxr-xr-x	root/root	sbin/ldconfig
 -rwxr-xr-x	root/root	sbin/sln
@@ -201,6 +201,7 @@ drwxr-xr-x	root/root	usr/include/bits/
 -rw-r--r--	root/root	usr/include/bits/errno.h
 -rw-r--r--	root/root	usr/include/bits/error.h
 -rw-r--r--	root/root	usr/include/bits/eventfd.h
+-rw-r--r--	root/root	usr/include/bits/fcntl-linux.h
 -rw-r--r--	root/root	usr/include/bits/fcntl.h
 -rw-r--r--	root/root	usr/include/bits/fcntl2.h
 -rw-r--r--	root/root	usr/include/bits/fenv.h
@@ -226,6 +227,7 @@ drwxr-xr-x	root/root	usr/include/bits/
 -rw-r--r--	root/root	usr/include/bits/mathcalls.h
 -rw-r--r--	root/root	usr/include/bits/mathdef.h
 -rw-r--r--	root/root	usr/include/bits/mathinline.h
+-rw-r--r--	root/root	usr/include/bits/mman-linux.h
 -rw-r--r--	root/root	usr/include/bits/mman.h
 -rw-r--r--	root/root	usr/include/bits/monetary-ldbl.h
 -rw-r--r--	root/root	usr/include/bits/mqueue.h
@@ -233,6 +235,7 @@ drwxr-xr-x	root/root	usr/include/bits/
 -rw-r--r--	root/root	usr/include/bits/msq.h
 -rw-r--r--	root/root	usr/include/bits/nan.h
 -rw-r--r--	root/root	usr/include/bits/netdb.h
+-rw-r--r--	root/root	usr/include/bits/param.h
 -rw-r--r--	root/root	usr/include/bits/poll.h
 -rw-r--r--	root/root	usr/include/bits/poll2.h
 -rw-r--r--	root/root	usr/include/bits/posix1_lim.h
@@ -270,6 +273,8 @@ drwxr-xr-x	root/root	usr/include/bits/
 -rw-r--r--	root/root	usr/include/bits/stdio.h
 -rw-r--r--	root/root	usr/include/bits/stdio2.h
 -rw-r--r--	root/root	usr/include/bits/stdio_lim.h
+-rw-r--r--	root/root	usr/include/bits/stdlib-bsearch.h
+-rw-r--r--	root/root	usr/include/bits/stdlib-float.h
 -rw-r--r--	root/root	usr/include/bits/stdlib-ldbl.h
 -rw-r--r--	root/root	usr/include/bits/stdlib.h
 -rw-r--r--	root/root	usr/include/bits/string.h
@@ -1219,312 +1224,311 @@ drwxr-xr-x	root/root	usr/include/xen/
 -rw-r--r--	root/root	usr/include/xen/privcmd.h
 -rw-r--r--	root/root	usr/include/xlocale.h
 drwxr-xr-x	root/root	usr/lib/
--rw-r--r--	root/root	usr/lib/Mcrt1.o
--rw-r--r--	root/root	usr/lib/Scrt1.o
-drwxr-xr-x	root/root	usr/lib/audit/
--rwxr-xr-x	root/root	usr/lib/audit/sotruss-lib.so
--rw-r--r--	root/root	usr/lib/crt1.o
--rw-r--r--	root/root	usr/lib/crti.o
--rw-r--r--	root/root	usr/lib/crtn.o
-drwxr-xr-x	root/root	usr/lib/gconv/
--rwxr-xr-x	root/root	usr/lib/gconv/ANSI_X3.110.so
--rwxr-xr-x	root/root	usr/lib/gconv/ARMSCII-8.so
--rwxr-xr-x	root/root	usr/lib/gconv/ASMO_449.so
--rwxr-xr-x	root/root	usr/lib/gconv/BIG5.so
--rwxr-xr-x	root/root	usr/lib/gconv/BIG5HKSCS.so
--rwxr-xr-x	root/root	usr/lib/gconv/BRF.so
--rwxr-xr-x	root/root	usr/lib/gconv/CP10007.so
--rwxr-xr-x	root/root	usr/lib/gconv/CP1125.so
--rwxr-xr-x	root/root	usr/lib/gconv/CP1250.so
--rwxr-xr-x	root/root	usr/lib/gconv/CP1251.so
--rwxr-xr-x	root/root	usr/lib/gconv/CP1252.so
--rwxr-xr-x	root/root	usr/lib/gconv/CP1253.so
--rwxr-xr-x	root/root	usr/lib/gconv/CP1254.so
--rwxr-xr-x	root/root	usr/lib/gconv/CP1255.so
--rwxr-xr-x	root/root	usr/lib/gconv/CP1256.so
--rwxr-xr-x	root/root	usr/lib/gconv/CP1257.so
--rwxr-xr-x	root/root	usr/lib/gconv/CP1258.so
--rwxr-xr-x	root/root	usr/lib/gconv/CP737.so
--rwxr-xr-x	root/root	usr/lib/gconv/CP770.so
--rwxr-xr-x	root/root	usr/lib/gconv/CP771.so
--rwxr-xr-x	root/root	usr/lib/gconv/CP772.so
--rwxr-xr-x	root/root	usr/lib/gconv/CP773.so
--rwxr-xr-x	root/root	usr/lib/gconv/CP774.so
--rwxr-xr-x	root/root	usr/lib/gconv/CP775.so
--rwxr-xr-x	root/root	usr/lib/gconv/CP932.so
--rwxr-xr-x	root/root	usr/lib/gconv/CSN_369103.so
--rwxr-xr-x	root/root	usr/lib/gconv/CWI.so
--rwxr-xr-x	root/root	usr/lib/gconv/DEC-MCS.so
--rwxr-xr-x	root/root	usr/lib/gconv/EBCDIC-AT-DE-A.so
--rwxr-xr-x	root/root	usr/lib/gconv/EBCDIC-AT-DE.so
--rwxr-xr-x	root/root	usr/lib/gconv/EBCDIC-CA-FR.so
--rwxr-xr-x	root/root	usr/lib/gconv/EBCDIC-DK-NO-A.so
--rwxr-xr-x	root/root	usr/lib/gconv/EBCDIC-DK-NO.so
--rwxr-xr-x	root/root	usr/lib/gconv/EBCDIC-ES-A.so
--rwxr-xr-x	root/root	usr/lib/gconv/EBCDIC-ES-S.so
--rwxr-xr-x	root/root	usr/lib/gconv/EBCDIC-ES.so
--rwxr-xr-x	root/root	usr/lib/gconv/EBCDIC-FI-SE-A.so
--rwxr-xr-x	root/root	usr/lib/gconv/EBCDIC-FI-SE.so
--rwxr-xr-x	root/root	usr/lib/gconv/EBCDIC-FR.so
--rwxr-xr-x	root/root	usr/lib/gconv/EBCDIC-IS-FRISS.so
--rwxr-xr-x	root/root	usr/lib/gconv/EBCDIC-IT.so
--rwxr-xr-x	root/root	usr/lib/gconv/EBCDIC-PT.so
--rwxr-xr-x	root/root	usr/lib/gconv/EBCDIC-UK.so
--rwxr-xr-x	root/root	usr/lib/gconv/EBCDIC-US.so
--rwxr-xr-x	root/root	usr/lib/gconv/ECMA-CYRILLIC.so
--rwxr-xr-x	root/root	usr/lib/gconv/EUC-CN.so
--rwxr-xr-x	root/root	usr/lib/gconv/EUC-JISX0213.so
--rwxr-xr-x	root/root	usr/lib/gconv/EUC-JP-MS.so
--rwxr-xr-x	root/root	usr/lib/gconv/EUC-JP.so
--rwxr-xr-x	root/root	usr/lib/gconv/EUC-KR.so
--rwxr-xr-x	root/root	usr/lib/gconv/EUC-TW.so
--rwxr-xr-x	root/root	usr/lib/gconv/GB18030.so
--rwxr-xr-x	root/root	usr/lib/gconv/GBBIG5.so
--rwxr-xr-x	root/root	usr/lib/gconv/GBGBK.so
--rwxr-xr-x	root/root	usr/lib/gconv/GBK.so
--rwxr-xr-x	root/root	usr/lib/gconv/GEORGIAN-ACADEMY.so
--rwxr-xr-x	root/root	usr/lib/gconv/GEORGIAN-PS.so
--rwxr-xr-x	root/root	usr/lib/gconv/GOST_19768-74.so
--rwxr-xr-x	root/root	usr/lib/gconv/GREEK-CCITT.so
--rwxr-xr-x	root/root	usr/lib/gconv/GREEK7-OLD.so
--rwxr-xr-x	root/root	usr/lib/gconv/GREEK7.so
--rwxr-xr-x	root/root	usr/lib/gconv/HP-GREEK8.so
--rwxr-xr-x	root/root	usr/lib/gconv/HP-ROMAN8.so
--rwxr-xr-x	root/root	usr/lib/gconv/HP-ROMAN9.so
--rwxr-xr-x	root/root	usr/lib/gconv/HP-THAI8.so
--rwxr-xr-x	root/root	usr/lib/gconv/HP-TURKISH8.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM037.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM038.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1004.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1008.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1008_420.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1025.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1026.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1046.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1047.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1097.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1112.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1122.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1123.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1124.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1129.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1130.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1132.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1133.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1137.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1140.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1141.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1142.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1143.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1144.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1145.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1146.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1147.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1148.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1149.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1153.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1154.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1155.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1156.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1157.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1158.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1160.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1161.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1162.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1163.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1164.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1166.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1167.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM12712.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1364.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1371.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1388.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1390.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM1399.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM16804.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM256.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM273.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM274.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM275.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM277.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM278.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM280.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM281.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM284.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM285.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM290.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM297.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM420.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM423.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM424.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM437.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM4517.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM4899.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM4909.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM4971.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM500.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM5347.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM803.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM850.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM851.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM852.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM855.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM856.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM857.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM860.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM861.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM862.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM863.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM864.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM865.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM866.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM866NAV.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM868.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM869.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM870.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM871.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM874.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM875.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM880.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM891.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM901.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM902.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM903.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM9030.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM904.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM905.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM9066.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM918.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM921.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM922.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM930.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM932.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM933.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM935.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM937.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM939.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM943.so
--rwxr-xr-x	root/root	usr/lib/gconv/IBM9448.so
--rwxr-xr-x	root/root	usr/lib/gconv/IEC_P27-1.so
--rwxr-xr-x	root/root	usr/lib/gconv/INIS-8.so
--rwxr-xr-x	root/root	usr/lib/gconv/INIS-CYRILLIC.so
--rwxr-xr-x	root/root	usr/lib/gconv/INIS.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISIRI-3342.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO-2022-CN-EXT.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO-2022-CN.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO-2022-JP-3.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO-2022-JP.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO-2022-KR.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO-IR-197.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO-IR-209.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO646.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO8859-1.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO8859-10.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO8859-11.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO8859-13.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO8859-14.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO8859-15.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO8859-16.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO8859-2.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO8859-3.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO8859-4.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO8859-5.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO8859-6.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO8859-7.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO8859-8.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO8859-9.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO8859-9E.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO_10367-BOX.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO_11548-1.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO_2033.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO_5427-EXT.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO_5427.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO_5428.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO_6937-2.so
--rwxr-xr-x	root/root	usr/lib/gconv/ISO_6937.so
--rwxr-xr-x	root/root	usr/lib/gconv/JOHAB.so
--rwxr-xr-x	root/root	usr/lib/gconv/KOI-8.so
--rwxr-xr-x	root/root	usr/lib/gconv/KOI8-R.so
--rwxr-xr-x	root/root	usr/lib/gconv/KOI8-RU.so
--rwxr-xr-x	root/root	usr/lib/gconv/KOI8-T.so
--rwxr-xr-x	root/root	usr/lib/gconv/KOI8-U.so
--rwxr-xr-x	root/root	usr/lib/gconv/LATIN-GREEK-1.so
--rwxr-xr-x	root/root	usr/lib/gconv/LATIN-GREEK.so
--rwxr-xr-x	root/root	usr/lib/gconv/MAC-CENTRALEUROPE.so
--rwxr-xr-x	root/root	usr/lib/gconv/MAC-IS.so
--rwxr-xr-x	root/root	usr/lib/gconv/MAC-SAMI.so
--rwxr-xr-x	root/root	usr/lib/gconv/MAC-UK.so
--rwxr-xr-x	root/root	usr/lib/gconv/MACINTOSH.so
--rwxr-xr-x	root/root	usr/lib/gconv/MIK.so
--rwxr-xr-x	root/root	usr/lib/gconv/NATS-DANO.so
--rwxr-xr-x	root/root	usr/lib/gconv/NATS-SEFI.so
--rwxr-xr-x	root/root	usr/lib/gconv/PT154.so
--rwxr-xr-x	root/root	usr/lib/gconv/RK1048.so
--rwxr-xr-x	root/root	usr/lib/gconv/SAMI-WS2.so
--rwxr-xr-x	root/root	usr/lib/gconv/SHIFT_JISX0213.so
--rwxr-xr-x	root/root	usr/lib/gconv/SJIS.so
--rwxr-xr-x	root/root	usr/lib/gconv/T.61.so
--rwxr-xr-x	root/root	usr/lib/gconv/TCVN5712-1.so
--rwxr-xr-x	root/root	usr/lib/gconv/TIS-620.so
--rwxr-xr-x	root/root	usr/lib/gconv/TSCII.so
--rwxr-xr-x	root/root	usr/lib/gconv/UHC.so
--rwxr-xr-x	root/root	usr/lib/gconv/UNICODE.so
--rwxr-xr-x	root/root	usr/lib/gconv/UTF-16.so
--rwxr-xr-x	root/root	usr/lib/gconv/UTF-32.so
--rwxr-xr-x	root/root	usr/lib/gconv/UTF-7.so
--rwxr-xr-x	root/root	usr/lib/gconv/VISCII.so
--rw-r--r--	root/root	usr/lib/gconv/gconv-modules
--rwxr-xr-x	root/root	usr/lib/gconv/libCNS.so
--rwxr-xr-x	root/root	usr/lib/gconv/libGB.so
--rwxr-xr-x	root/root	usr/lib/gconv/libISOIR165.so
--rwxr-xr-x	root/root	usr/lib/gconv/libJIS.so
--rwxr-xr-x	root/root	usr/lib/gconv/libJISX0213.so
--rwxr-xr-x	root/root	usr/lib/gconv/libKSC.so
--rw-r--r--	root/root	usr/lib/gcrt1.o
 drwxr-xr-x	root/root	usr/lib/getconf/
 -rwxr-xr-x	root/root	usr/lib/getconf/POSIX_V6_LP64_OFF64
 -rwxr-xr-x	root/root	usr/lib/getconf/POSIX_V7_LP64_OFF64
 -rwxr-xr-x	root/root	usr/lib/getconf/XBS5_LP64_OFF64
--rw-r--r--	root/root	usr/lib/libBrokenLocale.a
-lrwxrwxrwx	root/root	usr/lib/libBrokenLocale.so -> ../../lib/libBrokenLocale.so.1
--rw-r--r--	root/root	usr/lib/libanl.a
-lrwxrwxrwx	root/root	usr/lib/libanl.so -> ../../lib/libanl.so.1
--rw-r--r--	root/root	usr/lib/libbsd-compat.a
--rw-r--r--	root/root	usr/lib/libc.a
--rw-r--r--	root/root	usr/lib/libc.so
--rw-r--r--	root/root	usr/lib/libc_nonshared.a
-lrwxrwxrwx	root/root	usr/lib/libcidn.so -> ../../lib/libcidn.so.1
--rw-r--r--	root/root	usr/lib/libcrypt.a
-lrwxrwxrwx	root/root	usr/lib/libcrypt.so -> ../../lib/libcrypt.so.1
--rw-r--r--	root/root	usr/lib/libdl.a
-lrwxrwxrwx	root/root	usr/lib/libdl.so -> ../../lib/libdl.so.2
--rw-r--r--	root/root	usr/lib/libg.a
--rw-r--r--	root/root	usr/lib/libieee.a
--rw-r--r--	root/root	usr/lib/libm.a
-lrwxrwxrwx	root/root	usr/lib/libm.so -> ../../lib/libm.so.6
--rw-r--r--	root/root	usr/lib/libmcheck.a
--rw-r--r--	root/root	usr/lib/libnsl.a
-lrwxrwxrwx	root/root	usr/lib/libnsl.so -> ../../lib/libnsl.so.1
-lrwxrwxrwx	root/root	usr/lib/libnss_compat.so -> ../../lib/libnss_compat.so.2
-lrwxrwxrwx	root/root	usr/lib/libnss_db.so -> ../../lib/libnss_db.so.2
-lrwxrwxrwx	root/root	usr/lib/libnss_dns.so -> ../../lib/libnss_dns.so.2
-lrwxrwxrwx	root/root	usr/lib/libnss_files.so -> ../../lib/libnss_files.so.2
-lrwxrwxrwx	root/root	usr/lib/libnss_hesiod.so -> ../../lib/libnss_hesiod.so.2
-lrwxrwxrwx	root/root	usr/lib/libnss_nis.so -> ../../lib/libnss_nis.so.2
-lrwxrwxrwx	root/root	usr/lib/libnss_nisplus.so -> ../../lib/libnss_nisplus.so.2
--rw-r--r--	root/root	usr/lib/libpthread.a
--rw-r--r--	root/root	usr/lib/libpthread.so
--rw-r--r--	root/root	usr/lib/libpthread_nonshared.a
--rw-r--r--	root/root	usr/lib/libresolv.a
-lrwxrwxrwx	root/root	usr/lib/libresolv.so -> ../../lib/libresolv.so.2
--rw-r--r--	root/root	usr/lib/librpcsvc.a
--rw-r--r--	root/root	usr/lib/librt.a
-lrwxrwxrwx	root/root	usr/lib/librt.so -> ../../lib/librt.so.1
-lrwxrwxrwx	root/root	usr/lib/libthread_db.so -> ../../lib/libthread_db.so.1
--rw-r--r--	root/root	usr/lib/libutil.a
-lrwxrwxrwx	root/root	usr/lib/libutil.so -> ../../lib/libutil.so.1
 drwxr-xr-x	root/root	usr/lib/locale/
--rwsr-xr-x	root/root	usr/lib/pt_chown
+drwxr-xr-x	root/root	usr/lib64/
+-rw-r--r--	root/root	usr/lib64/Mcrt1.o
+-rw-r--r--	root/root	usr/lib64/Scrt1.o
+drwxr-xr-x	root/root	usr/lib64/audit/
+-rwxr-xr-x	root/root	usr/lib64/audit/sotruss-lib.so
+-rw-r--r--	root/root	usr/lib64/crt1.o
+-rw-r--r--	root/root	usr/lib64/crti.o
+-rw-r--r--	root/root	usr/lib64/crtn.o
+drwxr-xr-x	root/root	usr/lib64/gconv/
+-rwxr-xr-x	root/root	usr/lib64/gconv/ANSI_X3.110.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ARMSCII-8.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ASMO_449.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/BIG5.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/BIG5HKSCS.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/BRF.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CP10007.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CP1125.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CP1250.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CP1251.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CP1252.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CP1253.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CP1254.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CP1255.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CP1256.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CP1257.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CP1258.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CP737.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CP770.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CP771.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CP772.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CP773.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CP774.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CP775.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CP932.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CSN_369103.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/CWI.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/DEC-MCS.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EBCDIC-AT-DE-A.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EBCDIC-AT-DE.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EBCDIC-CA-FR.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EBCDIC-DK-NO-A.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EBCDIC-DK-NO.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EBCDIC-ES-A.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EBCDIC-ES-S.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EBCDIC-ES.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EBCDIC-FI-SE-A.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EBCDIC-FI-SE.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EBCDIC-FR.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EBCDIC-IS-FRISS.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EBCDIC-IT.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EBCDIC-PT.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EBCDIC-UK.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EBCDIC-US.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ECMA-CYRILLIC.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EUC-CN.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EUC-JISX0213.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EUC-JP-MS.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EUC-JP.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EUC-KR.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/EUC-TW.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/GB18030.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/GBBIG5.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/GBGBK.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/GBK.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/GEORGIAN-ACADEMY.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/GEORGIAN-PS.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/GOST_19768-74.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/GREEK-CCITT.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/GREEK7-OLD.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/GREEK7.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/HP-GREEK8.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/HP-ROMAN8.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/HP-ROMAN9.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/HP-THAI8.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/HP-TURKISH8.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM037.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM038.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1004.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1008.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1008_420.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1025.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1026.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1046.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1047.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1097.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1112.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1122.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1123.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1124.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1129.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1130.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1132.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1133.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1137.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1140.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1141.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1142.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1143.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1144.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1145.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1146.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1147.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1148.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1149.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1153.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1154.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1155.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1156.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1157.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1158.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1160.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1161.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1162.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1163.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1164.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1166.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1167.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM12712.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1364.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1371.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1388.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1390.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM1399.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM16804.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM256.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM273.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM274.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM275.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM277.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM278.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM280.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM281.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM284.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM285.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM290.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM297.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM420.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM423.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM424.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM437.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM4517.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM4899.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM4909.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM4971.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM500.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM5347.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM803.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM850.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM851.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM852.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM855.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM856.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM857.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM860.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM861.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM862.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM863.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM864.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM865.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM866.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM866NAV.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM868.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM869.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM870.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM871.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM874.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM875.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM880.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM891.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM901.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM902.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM903.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM9030.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM904.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM905.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM9066.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM918.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM921.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM922.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM930.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM932.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM933.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM935.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM937.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM939.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM943.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IBM9448.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/IEC_P27-1.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/INIS-8.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/INIS-CYRILLIC.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/INIS.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISIRI-3342.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO-2022-CN-EXT.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO-2022-CN.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO-2022-JP-3.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO-2022-JP.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO-2022-KR.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO-IR-197.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO-IR-209.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO646.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO8859-1.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO8859-10.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO8859-11.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO8859-13.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO8859-14.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO8859-15.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO8859-16.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO8859-2.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO8859-3.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO8859-4.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO8859-5.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO8859-6.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO8859-7.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO8859-8.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO8859-9.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO8859-9E.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO_10367-BOX.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO_11548-1.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO_2033.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO_5427-EXT.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO_5427.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO_5428.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO_6937-2.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/ISO_6937.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/JOHAB.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/KOI-8.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/KOI8-R.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/KOI8-RU.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/KOI8-T.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/KOI8-U.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/LATIN-GREEK-1.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/LATIN-GREEK.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/MAC-CENTRALEUROPE.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/MAC-IS.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/MAC-SAMI.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/MAC-UK.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/MACINTOSH.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/MIK.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/NATS-DANO.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/NATS-SEFI.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/PT154.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/RK1048.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/SAMI-WS2.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/SHIFT_JISX0213.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/SJIS.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/T.61.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/TCVN5712-1.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/TIS-620.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/TSCII.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/UHC.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/UNICODE.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/UTF-16.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/UTF-32.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/UTF-7.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/VISCII.so
+-rw-r--r--	root/root	usr/lib64/gconv/gconv-modules
+-rwxr-xr-x	root/root	usr/lib64/gconv/libCNS.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/libGB.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/libISOIR165.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/libJIS.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/libJISX0213.so
+-rwxr-xr-x	root/root	usr/lib64/gconv/libKSC.so
+-rw-r--r--	root/root	usr/lib64/gcrt1.o
+-rw-r--r--	root/root	usr/lib64/libBrokenLocale.a
+lrwxrwxrwx	root/root	usr/lib64/libBrokenLocale.so -> ../../lib64/libBrokenLocale.so.1
+-rw-r--r--	root/root	usr/lib64/libanl.a
+lrwxrwxrwx	root/root	usr/lib64/libanl.so -> ../../lib64/libanl.so.1
+-rw-r--r--	root/root	usr/lib64/libc.a
+-rw-r--r--	root/root	usr/lib64/libc.so
+-rw-r--r--	root/root	usr/lib64/libc_nonshared.a
+lrwxrwxrwx	root/root	usr/lib64/libcidn.so -> ../../lib64/libcidn.so.1
+-rw-r--r--	root/root	usr/lib64/libcrypt.a
+lrwxrwxrwx	root/root	usr/lib64/libcrypt.so -> ../../lib64/libcrypt.so.1
+-rw-r--r--	root/root	usr/lib64/libdl.a
+lrwxrwxrwx	root/root	usr/lib64/libdl.so -> ../../lib64/libdl.so.2
+-rw-r--r--	root/root	usr/lib64/libg.a
+-rw-r--r--	root/root	usr/lib64/libieee.a
+-rw-r--r--	root/root	usr/lib64/libm.a
+lrwxrwxrwx	root/root	usr/lib64/libm.so -> ../../lib64/libm.so.6
+-rw-r--r--	root/root	usr/lib64/libmcheck.a
+-rw-r--r--	root/root	usr/lib64/libnsl.a
+lrwxrwxrwx	root/root	usr/lib64/libnsl.so -> ../../lib64/libnsl.so.1
+lrwxrwxrwx	root/root	usr/lib64/libnss_compat.so -> ../../lib64/libnss_compat.so.2
+lrwxrwxrwx	root/root	usr/lib64/libnss_db.so -> ../../lib64/libnss_db.so.2
+lrwxrwxrwx	root/root	usr/lib64/libnss_dns.so -> ../../lib64/libnss_dns.so.2
+lrwxrwxrwx	root/root	usr/lib64/libnss_files.so -> ../../lib64/libnss_files.so.2
+lrwxrwxrwx	root/root	usr/lib64/libnss_hesiod.so -> ../../lib64/libnss_hesiod.so.2
+lrwxrwxrwx	root/root	usr/lib64/libnss_nis.so -> ../../lib64/libnss_nis.so.2
+lrwxrwxrwx	root/root	usr/lib64/libnss_nisplus.so -> ../../lib64/libnss_nisplus.so.2
+-rw-r--r--	root/root	usr/lib64/libpthread.a
+-rw-r--r--	root/root	usr/lib64/libpthread.so
+-rw-r--r--	root/root	usr/lib64/libpthread_nonshared.a
+-rw-r--r--	root/root	usr/lib64/libresolv.a
+lrwxrwxrwx	root/root	usr/lib64/libresolv.so -> ../../lib64/libresolv.so.2
+-rw-r--r--	root/root	usr/lib64/librpcsvc.a
+-rw-r--r--	root/root	usr/lib64/librt.a
+lrwxrwxrwx	root/root	usr/lib64/librt.so -> ../../lib64/librt.so.1
+lrwxrwxrwx	root/root	usr/lib64/libthread_db.so -> ../../lib64/libthread_db.so.1
+-rw-r--r--	root/root	usr/lib64/libutil.a
+lrwxrwxrwx	root/root	usr/lib64/libutil.so -> ../../lib64/libutil.so.1
 drwxr-xr-x	root/root	usr/sbin/
 -rwxr-xr-x	root/root	usr/sbin/iconvconfig
 -rwxr-xr-x	root/root	usr/sbin/nscd
@@ -1770,8 +1774,10 @@ drwxr-xr-x	root/root	usr/share/i18n/locales/
 -rw-r--r--	root/root	usr/share/i18n/locales/aa_ER@saaho
 -rw-r--r--	root/root	usr/share/i18n/locales/aa_ET
 -rw-r--r--	root/root	usr/share/i18n/locales/af_ZA
+-rw-r--r--	root/root	usr/share/i18n/locales/ak_GH
 -rw-r--r--	root/root	usr/share/i18n/locales/am_ET
 -rw-r--r--	root/root	usr/share/i18n/locales/an_ES
+-rw-r--r--	root/root	usr/share/i18n/locales/anp_IN
 -rw-r--r--	root/root	usr/share/i18n/locales/ar_AE
 -rw-r--r--	root/root	usr/share/i18n/locales/ar_BH
 -rw-r--r--	root/root	usr/share/i18n/locales/ar_DZ
@@ -1787,11 +1793,13 @@ drwxr-xr-x	root/root	usr/share/i18n/locales/
 -rw-r--r--	root/root	usr/share/i18n/locales/ar_QA
 -rw-r--r--	root/root	usr/share/i18n/locales/ar_SA
 -rw-r--r--	root/root	usr/share/i18n/locales/ar_SD
+-rw-r--r--	root/root	usr/share/i18n/locales/ar_SS
 -rw-r--r--	root/root	usr/share/i18n/locales/ar_SY
 -rw-r--r--	root/root	usr/share/i18n/locales/ar_TN
 -rw-r--r--	root/root	usr/share/i18n/locales/ar_YE
 -rw-r--r--	root/root	usr/share/i18n/locales/as_IN
 -rw-r--r--	root/root	usr/share/i18n/locales/ast_ES
+-rw-r--r--	root/root	usr/share/i18n/locales/ayc_PE
 -rw-r--r--	root/root	usr/share/i18n/locales/az_AZ
 -rw-r--r--	root/root	usr/share/i18n/locales/be_BY
 -rw-r--r--	root/root	usr/share/i18n/locales/be_BY@latin
@@ -1814,6 +1822,7 @@ drwxr-xr-x	root/root	usr/share/i18n/locales/
 -rw-r--r--	root/root	usr/share/i18n/locales/ca_ES@euro
 -rw-r--r--	root/root	usr/share/i18n/locales/ca_FR
 -rw-r--r--	root/root	usr/share/i18n/locales/ca_IT
+-rw-r--r--	root/root	usr/share/i18n/locales/cmn_TW
 -rw-r--r--	root/root	usr/share/i18n/locales/crh_UA
 -rw-r--r--	root/root	usr/share/i18n/locales/cs_CZ
 -rw-r--r--	root/root	usr/share/i18n/locales/csb_PL
@@ -1829,6 +1838,7 @@ drwxr-xr-x	root/root	usr/share/i18n/locales/
 -rw-r--r--	root/root	usr/share/i18n/locales/de_DE@euro
 -rw-r--r--	root/root	usr/share/i18n/locales/de_LU
 -rw-r--r--	root/root	usr/share/i18n/locales/de_LU@euro
+-rw-r--r--	root/root	usr/share/i18n/locales/doi_IN
 -rw-r--r--	root/root	usr/share/i18n/locales/dv_MV
 -rw-r--r--	root/root	usr/share/i18n/locales/dz_BT
 -rw-r--r--	root/root	usr/share/i18n/locales/el_CY
@@ -1906,6 +1916,7 @@ drwxr-xr-x	root/root	usr/share/i18n/locales/
 -rw-r--r--	root/root	usr/share/i18n/locales/gu_IN
 -rw-r--r--	root/root	usr/share/i18n/locales/gv_GB
 -rw-r--r--	root/root	usr/share/i18n/locales/ha_NG
+-rw-r--r--	root/root	usr/share/i18n/locales/hak_TW
 -rw-r--r--	root/root	usr/share/i18n/locales/he_IL
 -rw-r--r--	root/root	usr/share/i18n/locales/hi_IN
 -rw-r--r--	root/root	usr/share/i18n/locales/hne_IN
@@ -1915,6 +1926,7 @@ drwxr-xr-x	root/root	usr/share/i18n/locales/
 -rw-r--r--	root/root	usr/share/i18n/locales/hu_HU
 -rw-r--r--	root/root	usr/share/i18n/locales/hy_AM
 -rw-r--r--	root/root	usr/share/i18n/locales/i18n
+-rw-r--r--	root/root	usr/share/i18n/locales/ia_FR
 -rw-r--r--	root/root	usr/share/i18n/locales/id_ID
 -rw-r--r--	root/root	usr/share/i18n/locales/ig_NG
 -rw-r--r--	root/root	usr/share/i18n/locales/ik_CA
@@ -1948,6 +1960,7 @@ drwxr-xr-x	root/root	usr/share/i18n/locales/
 -rw-r--r--	root/root	usr/share/i18n/locales/lo_LA
 -rw-r--r--	root/root	usr/share/i18n/locales/lt_LT
 -rw-r--r--	root/root	usr/share/i18n/locales/lv_LV
+-rw-r--r--	root/root	usr/share/i18n/locales/lzh_TW
 -rw-r--r--	root/root	usr/share/i18n/locales/mag_IN
 -rw-r--r--	root/root	usr/share/i18n/locales/mai_IN
 -rw-r--r--	root/root	usr/share/i18n/locales/mg_MG
@@ -1956,15 +1969,20 @@ drwxr-xr-x	root/root	usr/share/i18n/locales/
 -rw-r--r--	root/root	usr/share/i18n/locales/mk_MK
 -rw-r--r--	root/root	usr/share/i18n/locales/ml_IN
 -rw-r--r--	root/root	usr/share/i18n/locales/mn_MN
+-rw-r--r--	root/root	usr/share/i18n/locales/mni_IN
 -rw-r--r--	root/root	usr/share/i18n/locales/mr_IN
 -rw-r--r--	root/root	usr/share/i18n/locales/ms_MY
 -rw-r--r--	root/root	usr/share/i18n/locales/mt_MT
 -rw-r--r--	root/root	usr/share/i18n/locales/my_MM
+-rw-r--r--	root/root	usr/share/i18n/locales/nan_TW
 -rw-r--r--	root/root	usr/share/i18n/locales/nan_TW@latin
 -rw-r--r--	root/root	usr/share/i18n/locales/nb_NO
 -rw-r--r--	root/root	usr/share/i18n/locales/nds_DE
 -rw-r--r--	root/root	usr/share/i18n/locales/nds_NL
 -rw-r--r--	root/root	usr/share/i18n/locales/ne_NP
+-rw-r--r--	root/root	usr/share/i18n/locales/nhn_MX
+-rw-r--r--	root/root	usr/share/i18n/locales/niu_NU
+-rw-r--r--	root/root	usr/share/i18n/locales/niu_NZ
 -rw-r--r--	root/root	usr/share/i18n/locales/nl_AW
 -rw-r--r--	root/root	usr/share/i18n/locales/nl_BE
 -rw-r--r--	root/root	usr/share/i18n/locales/nl_BE@euro
@@ -1981,16 +1999,20 @@ drwxr-xr-x	root/root	usr/share/i18n/locales/
 -rw-r--r--	root/root	usr/share/i18n/locales/pa_IN
 -rw-r--r--	root/root	usr/share/i18n/locales/pa_PK
 -rw-r--r--	root/root	usr/share/i18n/locales/pap_AN
+-rw-r--r--	root/root	usr/share/i18n/locales/pap_AW
+-rw-r--r--	root/root	usr/share/i18n/locales/pap_CW
 -rw-r--r--	root/root	usr/share/i18n/locales/pl_PL
 -rw-r--r--	root/root	usr/share/i18n/locales/ps_AF
 -rw-r--r--	root/root	usr/share/i18n/locales/pt_BR
 -rw-r--r--	root/root	usr/share/i18n/locales/pt_PT
 -rw-r--r--	root/root	usr/share/i18n/locales/pt_PT@euro
+-rw-r--r--	root/root	usr/share/i18n/locales/quz_PE
 -rw-r--r--	root/root	usr/share/i18n/locales/ro_RO
 -rw-r--r--	root/root	usr/share/i18n/locales/ru_RU
 -rw-r--r--	root/root	usr/share/i18n/locales/ru_UA
 -rw-r--r--	root/root	usr/share/i18n/locales/rw_RW
 -rw-r--r--	root/root	usr/share/i18n/locales/sa_IN
+-rw-r--r--	root/root	usr/share/i18n/locales/sat_IN
 -rw-r--r--	root/root	usr/share/i18n/locales/sc_IT
 -rw-r--r--	root/root	usr/share/i18n/locales/sd_IN
 -rw-r--r--	root/root	usr/share/i18n/locales/sd_IN@devanagari
@@ -2016,11 +2038,13 @@ drwxr-xr-x	root/root	usr/share/i18n/locales/
 -rw-r--r--	root/root	usr/share/i18n/locales/sv_SE
 -rw-r--r--	root/root	usr/share/i18n/locales/sw_KE
 -rw-r--r--	root/root	usr/share/i18n/locales/sw_TZ
+-rw-r--r--	root/root	usr/share/i18n/locales/szl_PL
 -rw-r--r--	root/root	usr/share/i18n/locales/ta_IN
 -rw-r--r--	root/root	usr/share/i18n/locales/ta_LK
 -rw-r--r--	root/root	usr/share/i18n/locales/te_IN
 -rw-r--r--	root/root	usr/share/i18n/locales/tg_TJ
 -rw-r--r--	root/root	usr/share/i18n/locales/th_TH
+-rw-r--r--	root/root	usr/share/i18n/locales/the_NP
 -rw-r--r--	root/root	usr/share/i18n/locales/ti_ER
 -rw-r--r--	root/root	usr/share/i18n/locales/ti_ET
 -rw-r--r--	root/root	usr/share/i18n/locales/tig_ER
