@@ -4,51 +4,51 @@ drwxr-xr-x	root/root	etc/ld.so.conf.d/
 drwxr-xr-x	root/root	lib/
 lrwxrwxrwx	root/root	lib/ld-linux.so.2 -> /lib32/ld-linux.so.2
 drwxr-xr-x	root/root	lib32/
--rwxr-xr-x	root/root	lib32/ld-2.16.so
-lrwxrwxrwx	root/root	lib32/ld-linux.so.2 -> ld-2.16.so
--rwxr-xr-x	root/root	lib32/libBrokenLocale-2.16.so
-lrwxrwxrwx	root/root	lib32/libBrokenLocale.so.1 -> libBrokenLocale-2.16.so
+-rwxr-xr-x	root/root	lib32/ld-2.19.so
+lrwxrwxrwx	root/root	lib32/ld-linux.so.2 -> ld-2.19.so
+-rwxr-xr-x	root/root	lib32/libBrokenLocale-2.19.so
+lrwxrwxrwx	root/root	lib32/libBrokenLocale.so.1 -> libBrokenLocale-2.19.so
 -rwxr-xr-x	root/root	lib32/libSegFault.so
--rwxr-xr-x	root/root	lib32/libanl-2.16.so
-lrwxrwxrwx	root/root	lib32/libanl.so.1 -> libanl-2.16.so
--rwxr-xr-x	root/root	lib32/libc-2.16.so
-lrwxrwxrwx	root/root	lib32/libc.so.6 -> libc-2.16.so
--rwxr-xr-x	root/root	lib32/libcidn-2.16.so
-lrwxrwxrwx	root/root	lib32/libcidn.so.1 -> libcidn-2.16.so
--rwxr-xr-x	root/root	lib32/libcrypt-2.16.so
-lrwxrwxrwx	root/root	lib32/libcrypt.so.1 -> libcrypt-2.16.so
--rwxr-xr-x	root/root	lib32/libdl-2.16.so
-lrwxrwxrwx	root/root	lib32/libdl.so.2 -> libdl-2.16.so
--rwxr-xr-x	root/root	lib32/libm-2.16.so
-lrwxrwxrwx	root/root	lib32/libm.so.6 -> libm-2.16.so
+-rwxr-xr-x	root/root	lib32/libanl-2.19.so
+lrwxrwxrwx	root/root	lib32/libanl.so.1 -> libanl-2.19.so
+-rwxr-xr-x	root/root	lib32/libc-2.19.so
+lrwxrwxrwx	root/root	lib32/libc.so.6 -> libc-2.19.so
+-rwxr-xr-x	root/root	lib32/libcidn-2.19.so
+lrwxrwxrwx	root/root	lib32/libcidn.so.1 -> libcidn-2.19.so
+-rwxr-xr-x	root/root	lib32/libcrypt-2.19.so
+lrwxrwxrwx	root/root	lib32/libcrypt.so.1 -> libcrypt-2.19.so
+-rwxr-xr-x	root/root	lib32/libdl-2.19.so
+lrwxrwxrwx	root/root	lib32/libdl.so.2 -> libdl-2.19.so
+-rwxr-xr-x	root/root	lib32/libm-2.19.so
+lrwxrwxrwx	root/root	lib32/libm.so.6 -> libm-2.19.so
 -rwxr-xr-x	root/root	lib32/libmemusage.so
--rwxr-xr-x	root/root	lib32/libnsl-2.16.so
-lrwxrwxrwx	root/root	lib32/libnsl.so.1 -> libnsl-2.16.so
--rwxr-xr-x	root/root	lib32/libnss_compat-2.16.so
-lrwxrwxrwx	root/root	lib32/libnss_compat.so.2 -> libnss_compat-2.16.so
--rwxr-xr-x	root/root	lib32/libnss_db-2.16.so
-lrwxrwxrwx	root/root	lib32/libnss_db.so.2 -> libnss_db-2.16.so
--rwxr-xr-x	root/root	lib32/libnss_dns-2.16.so
-lrwxrwxrwx	root/root	lib32/libnss_dns.so.2 -> libnss_dns-2.16.so
--rwxr-xr-x	root/root	lib32/libnss_files-2.16.so
-lrwxrwxrwx	root/root	lib32/libnss_files.so.2 -> libnss_files-2.16.so
--rwxr-xr-x	root/root	lib32/libnss_hesiod-2.16.so
-lrwxrwxrwx	root/root	lib32/libnss_hesiod.so.2 -> libnss_hesiod-2.16.so
--rwxr-xr-x	root/root	lib32/libnss_nis-2.16.so
-lrwxrwxrwx	root/root	lib32/libnss_nis.so.2 -> libnss_nis-2.16.so
--rwxr-xr-x	root/root	lib32/libnss_nisplus-2.16.so
-lrwxrwxrwx	root/root	lib32/libnss_nisplus.so.2 -> libnss_nisplus-2.16.so
+-rwxr-xr-x	root/root	lib32/libnsl-2.19.so
+lrwxrwxrwx	root/root	lib32/libnsl.so.1 -> libnsl-2.19.so
+-rwxr-xr-x	root/root	lib32/libnss_compat-2.19.so
+lrwxrwxrwx	root/root	lib32/libnss_compat.so.2 -> libnss_compat-2.19.so
+-rwxr-xr-x	root/root	lib32/libnss_db-2.19.so
+lrwxrwxrwx	root/root	lib32/libnss_db.so.2 -> libnss_db-2.19.so
+-rwxr-xr-x	root/root	lib32/libnss_dns-2.19.so
+lrwxrwxrwx	root/root	lib32/libnss_dns.so.2 -> libnss_dns-2.19.so
+-rwxr-xr-x	root/root	lib32/libnss_files-2.19.so
+lrwxrwxrwx	root/root	lib32/libnss_files.so.2 -> libnss_files-2.19.so
+-rwxr-xr-x	root/root	lib32/libnss_hesiod-2.19.so
+lrwxrwxrwx	root/root	lib32/libnss_hesiod.so.2 -> libnss_hesiod-2.19.so
+-rwxr-xr-x	root/root	lib32/libnss_nis-2.19.so
+lrwxrwxrwx	root/root	lib32/libnss_nis.so.2 -> libnss_nis-2.19.so
+-rwxr-xr-x	root/root	lib32/libnss_nisplus-2.19.so
+lrwxrwxrwx	root/root	lib32/libnss_nisplus.so.2 -> libnss_nisplus-2.19.so
 -rwxr-xr-x	root/root	lib32/libpcprofile.so
--rwxr-xr-x	root/root	lib32/libpthread-2.16.so
-lrwxrwxrwx	root/root	lib32/libpthread.so.0 -> libpthread-2.16.so
--rwxr-xr-x	root/root	lib32/libresolv-2.16.so
-lrwxrwxrwx	root/root	lib32/libresolv.so.2 -> libresolv-2.16.so
--rwxr-xr-x	root/root	lib32/librt-2.16.so
-lrwxrwxrwx	root/root	lib32/librt.so.1 -> librt-2.16.so
+-rwxr-xr-x	root/root	lib32/libpthread-2.19.so
+lrwxrwxrwx	root/root	lib32/libpthread.so.0 -> libpthread-2.19.so
+-rwxr-xr-x	root/root	lib32/libresolv-2.19.so
+lrwxrwxrwx	root/root	lib32/libresolv.so.2 -> libresolv-2.19.so
+-rwxr-xr-x	root/root	lib32/librt-2.19.so
+lrwxrwxrwx	root/root	lib32/librt.so.1 -> librt-2.19.so
 -rwxr-xr-x	root/root	lib32/libthread_db-1.0.so
 lrwxrwxrwx	root/root	lib32/libthread_db.so.1 -> libthread_db-1.0.so
--rwxr-xr-x	root/root	lib32/libutil-2.16.so
-lrwxrwxrwx	root/root	lib32/libutil.so.1 -> libutil-2.16.so
+-rwxr-xr-x	root/root	lib32/libutil-2.19.so
+lrwxrwxrwx	root/root	lib32/libutil.so.1 -> libutil-2.19.so
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/include/
 drwxr-xr-x	root/root	usr/include/gnu/
@@ -319,11 +319,16 @@ drwxr-xr-x	root/root	usr/lib32/gconv/
 -rwxr-xr-x	root/root	usr/lib32/gconv/libKSC.so
 -rw-r--r--	root/root	usr/lib32/gcrt1.o
 drwxr-xr-x	root/root	usr/lib32/getconf/
+-rwxr-xr-x	root/root	usr/lib32/getconf/POSIX_V6_ILP32_OFF32
+-rwxr-xr-x	root/root	usr/lib32/getconf/POSIX_V6_ILP32_OFFBIG
+-rwxr-xr-x	root/root	usr/lib32/getconf/POSIX_V7_ILP32_OFF32
+-rwxr-xr-x	root/root	usr/lib32/getconf/POSIX_V7_ILP32_OFFBIG
+-rwxr-xr-x	root/root	usr/lib32/getconf/XBS5_ILP32_OFF32
+-rwxr-xr-x	root/root	usr/lib32/getconf/XBS5_ILP32_OFFBIG
 -rw-r--r--	root/root	usr/lib32/libBrokenLocale.a
 lrwxrwxrwx	root/root	usr/lib32/libBrokenLocale.so -> ../../lib32/libBrokenLocale.so.1
 -rw-r--r--	root/root	usr/lib32/libanl.a
 lrwxrwxrwx	root/root	usr/lib32/libanl.so -> ../../lib32/libanl.so.1
--rw-r--r--	root/root	usr/lib32/libbsd-compat.a
 -rw-r--r--	root/root	usr/lib32/libc.a
 -rw-r--r--	root/root	usr/lib32/libc.so
 -rw-r--r--	root/root	usr/lib32/libc_nonshared.a
@@ -357,4 +362,3 @@ lrwxrwxrwx	root/root	usr/lib32/librt.so -> ../../lib32/librt.so.1
 lrwxrwxrwx	root/root	usr/lib32/libthread_db.so -> ../../lib32/libthread_db.so.1
 -rw-r--r--	root/root	usr/lib32/libutil.a
 lrwxrwxrwx	root/root	usr/lib32/libutil.so -> ../../lib32/libutil.so.1
--rwsr-xr-x	root/root	usr/lib32/pt_chown
