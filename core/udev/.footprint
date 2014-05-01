@@ -34,7 +34,7 @@ drwxr-xr-x	root/root	lib/udev/rules.d/
 -rw-r--r--	root/root	lib/udev/rules.d/75-tty-description.rules
 -rw-r--r--	root/root	lib/udev/rules.d/78-sound-card.rules
 -rw-r--r--	root/root	lib/udev/rules.d/80-drivers.rules
--rw-r--r--	root/root	lib/udev/rules.d/81-crux.rules
+-rw-r--r--	root/root	lib/udev/rules.d/81-riptide.rules
 -rw-r--r--	root/root	lib/udev/rules.d/95-udev-late.rules
 -rwxr-xr-x	root/root	lib/udev/scsi_id
 -rwxr-xr-x	root/root	lib/udev/udevd

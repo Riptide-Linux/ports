@@ -1,13 +1,14 @@
 # Description: Userspace device management daemon
 # URL:         http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Depends on:  kmod
+# Last inspected: 01-05-2014
 
 name=udev
 version=182
 release=2
 source=(ftp://ftp.kernel.org/pub/linux/utils/kernel/hotplug/$name-$version.tar.xz \
-        81-crux.rules start_udev)
+        81-riptide.rules start_udev)
 
 build() {
     cd udev-$version
@@ -37,7 +38,7 @@ build() {
 
     # Add CRUX items
     install -m 0755 $SRC/start_udev $PKG/sbin
-    install -m 0644 $SRC/81-crux.rules $PKG/lib/udev/rules.d
+    install -m 0644 $SRC/81-riptide.rules $PKG/lib/udev/rules.d
 
     # Remove junk
     rm -r $PKG/usr/share/{gtk-,}doc
