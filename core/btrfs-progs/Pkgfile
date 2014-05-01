@@ -1,7 +1,8 @@
 # Description: Filesystem utilities for btrfs
 # URL:         http://btrfs.wiki.kernel.org
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Depends on:  util-linux e2fsprogs
+# Last inspected: 01-05-2014
 
 name=btrfs-progs
 version=20121004
