@@ -1,6 +1,7 @@
 # Description: A utility to simplify ports searching/installing
 # URL:         http://jw.smts.ch/files/crux/prt-get_quickstart.html
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
+# Last inspected: 02-05-2014
 
 name=prt-get
 version=5.19
