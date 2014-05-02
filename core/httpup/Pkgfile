@@ -1,7 +1,8 @@
-# Maintainer:  CRUX System Team, core-ports at crux dot nu 
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com> 
 # Description: One way sync over http
 # URL:         http://jw.tks6.net/files/crux/httpup_manual.html 
 # Depends on:  curl
+# Last inspected: 02-05-2014
 
 name=httpup
 version=0.4.0l
