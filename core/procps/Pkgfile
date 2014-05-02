@@ -1,10 +1,11 @@
 # Description: The /proc file system utilities
 # URL:         http://gitorious.org/procps
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Depends on:  ncurses
+# Last inspected: 02-05-2014
 
 name=procps
-version=3.3.4
+version=3.3.9
 release=1
 source=(http://ftp.de.debian.org/debian/pool/main/p/$name/${name}_$version.orig.tar.xz
         sysctl.conf)
