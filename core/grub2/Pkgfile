@@ -1,7 +1,8 @@
 # Description: A Multiboot boot loader
 # URL: http://www.gnu.org/software/grub/
-# Maintainer: Matt Housh, jaeger at morpheus dot net
+# Maintainer: Riptide Maintainers <riptide_devel@googlegroups.com>
 # Depends on: libdevmapper, freetype
+# Last inspected: 02-05-2014
 
 name=grub2
 version=2.00

@@ -33,12 +33,12 @@ set default=0
 
 # Boot entries:
 
-# CRUX
-menuentry "CRUX 2.8 (3.6.3)" {
+# Riptide
+menuentry "Riptide" {
 	linux /boot/vmlinuz-3.6.3 root=/dev/sda2
 }
 
-menuentry "CRUX 2.8 (3.6.3) single-user rescue" {
+menuentry "Riptide single-user rescue" {
 	linux /boot/vmlinuz-3.6.3 root=/dev/sda2 single
 }
 
