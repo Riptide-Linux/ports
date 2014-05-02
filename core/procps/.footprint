@@ -3,14 +3,15 @@ drwxr-xr-x	root/root	bin/
 drwxr-xr-x	root/root	etc/
 -rw-r--r--	root/root	etc/sysctl.conf
 drwxr-xr-x	root/root	lib/
-lrwxrwxrwx	root/root	lib/libprocps.so.0 -> libprocps.so.0.0.1
--rwxr-xr-x	root/root	lib/libprocps.so.0.0.1
+lrwxrwxrwx	root/root	lib/libprocps.so.3 -> libprocps.so.3.0.0
+-rwxr-xr-x	root/root	lib/libprocps.so.3.0.0
 drwxr-xr-x	root/root	sbin/
 -rwxr-xr-x	root/root	sbin/sysctl
 drwxr-xr-x	root/root	usr/
 drwxr-xr-x	root/root	usr/bin/
 -rwxr-xr-x	root/root	usr/bin/free
 -rwxr-xr-x	root/root	usr/bin/pgrep
+-rwxr-xr-x	root/root	usr/bin/pidof
 -rwxr-xr-x	root/root	usr/bin/pkill
 -rwxr-xr-x	root/root	usr/bin/pmap
 -rwxr-xr-x	root/root	usr/bin/pwdx
@@ -38,13 +39,14 @@ drwxr-xr-x	root/root	usr/include/proc/
 drwxr-xr-x	root/root	usr/lib/
 -rw-r--r--	root/root	usr/lib/libprocps.a
 -rwxr-xr-x	root/root	usr/lib/libprocps.la
-lrwxrwxrwx	root/root	usr/lib/libprocps.so -> ../../lib/libprocps.so.0.0.1
+lrwxrwxrwx	root/root	usr/lib/libprocps.so -> ../../lib/
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/libprocps.pc
 drwxr-xr-x	root/root	usr/man/
 drwxr-xr-x	root/root	usr/man/man1/
 -rw-r--r--	root/root	usr/man/man1/free.1.gz
 -rw-r--r--	root/root	usr/man/man1/pgrep.1.gz
+-rw-r--r--	root/root	usr/man/man1/pidof.1.gz
 -rw-r--r--	root/root	usr/man/man1/pkill.1.gz
 -rw-r--r--	root/root	usr/man/man1/pmap.1.gz
 -rw-r--r--	root/root	usr/man/man1/ps.1.gz
