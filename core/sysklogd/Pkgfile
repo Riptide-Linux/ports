@@ -1,6 +1,7 @@
 # Description: Kernel and system logging daemons
 # URL:         http://www.infodrom.org/projects/sysklogd/
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
+# Last inspected: 02-05-2014
 
 name=sysklogd
 version=1.5
