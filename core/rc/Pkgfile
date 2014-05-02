@@ -1,6 +1,7 @@
 # Description: BSD-like init-scripts
 # URL:         http://crux.nu
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
+# Last inspected: 02-05-2014
 
 name=rc
 version=2.28
