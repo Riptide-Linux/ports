@@ -1,6 +1,7 @@
 # Description: Root filesystem package
 # URL:         http://crux.nu
-# Maintainer:  CRUX System Team, core-ports at crux dot nu
+# Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
+# Last inspected: 02-05-2014
 
 name=filesystem
 version=3.0
@@ -77,7 +78,7 @@ build() {
 cat > $PKG/usr/bin/crux << EOF
 #!/bin/sh
 
-echo "CRUX version $version x86_64-multilib"
+echo "Riptide version $version x86_64-multilib"
 
 # End of file
 EOF
