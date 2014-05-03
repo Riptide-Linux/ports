@@ -1,13 +1,13 @@
 # Description: The /proc file system utilities
-# URL:         http://gitorious.org/procps
+# URL:         http://www.sourceforge.net/projects/procps-ng/
 # Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Depends on:  ncurses
-# Last inspected: 02-05-2014
+# Last inspected: 16-05-2014
 
 name=procps
 version=3.3.9
 release=1
-source=(http://ftp.de.debian.org/debian/pool/main/p/$name/${name}_$version.orig.tar.xz
+source=(http://sourceforge.net/projects/procps-ng/files/Production/$name-ng-$version.tar.xz
         sysctl.conf)
 
 build() {
@@ -25,7 +25,7 @@ build() {
 
     install -d $PKG/{lib,etc}
     mv $PKG/usr/lib/libprocps.so.* $PKG/lib
-    ln -sf ../../lib/$(readlink $PKG/lib/libprocps.so.0) $PKG/usr/lib/libprocps.so
+    ln -sf ../../lib/$(readlink $PKG/lib/libprocps.so.3) $PKG/usr/lib/libprocps.so
     install -m 0644 $SRC/sysctl.conf $PKG/etc/sysctl.conf
 
     rm -r $PKG/usr/share
