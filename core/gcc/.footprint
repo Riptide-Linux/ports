@@ -1066,7 +1066,6 @@ lrwxrwxrwx	root/root	usr/lib/libssp.so.0 -> libssp.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib/libstdc++.so -> libstdc++.so.6.0.18
 lrwxrwxrwx	root/root	usr/lib/libstdc++.so.6 -> libstdc++.so.6.0.18
 -rwxr-xr-x	root/root	usr/lib/libstdc++.so.6.0.18
--rw-r--r--	root/root	usr/lib/libstdc++.so.6.0.18-gdb.py
 -rw-r--r--	root/root	usr/lib/libsupc++.a
 -rwxr-xr-x	root/root	usr/lib/libsupc++.la
 -rw-r--r--	root/root	usr/lib/libtsan.a
@@ -1127,7 +1126,6 @@ lrwxrwxrwx	root/root	usr/lib32/libssp.so.0 -> libssp.so.0.0.0
 lrwxrwxrwx	root/root	usr/lib32/libstdc++.so -> libstdc++.so.6.0.18
 lrwxrwxrwx	root/root	usr/lib32/libstdc++.so.6 -> libstdc++.so.6.0.18
 -rwxr-xr-x	root/root	usr/lib32/libstdc++.so.6.0.18
--rw-r--r--	root/root	usr/lib32/libstdc++.so.6.0.18-gdb.py
 -rw-r--r--	root/root	usr/lib32/libsupc++.a
 -rwxr-xr-x	root/root	usr/lib32/libsupc++.la
 drwxr-xr-x	root/root	usr/man/
