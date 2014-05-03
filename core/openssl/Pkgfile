@@ -1,16 +1,18 @@
 # Description: Secure Sockets Layer and Transport Layer Security tools
 # URL:         http://www.openssl.org/
 # Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
-# Last inspected: 8-4-2014
+# Last inspected: 06-05-2014
 
 name=openssl
 version=1.0.1g
 release=1
 source=(http://www.openssl.org/source/$name-$version.tar.gz \
+	http://www.linuxfromscratch.org/patches/blfs/svn/$name-$version-fix_pod_syntax-1.patch
         mksslcert.sh)
 
 build() {
     cd $name-$version
+    patch -Np1 -i ../$name-$version-fix_pod_syntax-1.patch
     export MAKEFLAGS="$MAKEFLAGS -j1"
     ./config --prefix=/usr --openssldir=/etc/ssl shared
     sed -i "s|-O3|$CFLAGS|" Makefile
