@@ -1,7 +1,7 @@
 # Description: Secure SHell server and client tools
 # URL:         http://www.openssh.org/
 # Maintainer:  Riptide Maintianers <riptide_devel@googlegroups.com 
-# Depends on:  openssl zlib tcp_wrappers
+# Depends on:  openssl zlib
 # Last inspected: 29-04-2014
 
 name=openssh
