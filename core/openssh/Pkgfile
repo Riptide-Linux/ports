@@ -16,7 +16,6 @@ build() {
                 --sysconfdir=/etc/ssh \
                 --with-mantype=man \
                 --mandir=/usr/man \
-                --with-tcp-wrappers \
                 --with-md5-passwords \
                 --with-privsep-user=nobody \
                 --with-privsep-path=/var/empty \
