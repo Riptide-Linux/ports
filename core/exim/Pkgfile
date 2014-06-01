@@ -1,24 +1,22 @@
 # Description: Mail transfer agent
 # URL:         http://www.exim.org
 # Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
-# Depends on:  db openssl libpcre tcp_wrappers
-# Last inspected: 25-04-2014
+# Depends on:  db openssl libpcre
+# Last inspected: 01-06-2014
 
 name=exim
-version=4.82
+version=4.82.1
 release=1
-source=(ftp://ftp.exim.org/pub/exim/exim4/$name-$version.tar.bz2 \
-        $name $name-config.patch
-        $name-compile_number.patch)
+source=(ftp://exim.inode.at/$name/exim4/$name-$version.tar.bz2 \
+        $name $name-config.patch)
 
 build() {
     cd $name-$version
 
-    patch -p1 -i $SRC/$name-compile_number.patch
-
     sed "s/#CFLAGS#/$CFLAGS/" $SRC/$name-config.patch | patch -p1
     cp src/EDITME Local/Makefile
 
+    make makefile
     make -j1
     make DESTDIR=$PKG install
 

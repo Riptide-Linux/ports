@@ -128,7 +128,7 @@ diff -Nru exim-4.80.orig/src/EDITME exim-4.80/src/EDITME
  # library for TCP wrappers, so you probably need something like this:
  #
 -# USE_TCP_WRAPPERS=yes
-+USE_TCP_WRAPPERS=yes
++USE_TCP_WRAPPERS=no
  # CFLAGS=-O -I/usr/local/include
 -# EXTRALIBS_EXIM=-L/usr/local/lib -lwrap
 +EXTRALIBS_EXIM=-lwrap
