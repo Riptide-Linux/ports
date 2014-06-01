@@ -25,5 +25,5 @@ build() {
 	make
 	make DESTDIR=$PKG install
 	rm -rf $PKG/usr/share/{info,locale,grub/themes}
-	./grub-mkfont -o $PKG/usr/share/grub/unifont.pf2
+	$PKG/usr/bin/grub-mkfont -o $PKG/usr/share/grub/unifont.pf2
 }
