@@ -6,9 +6,9 @@
 
 name=grub2
 version=2.00
-release=3
+release=4
 source=(ftp://ftp.gnu.org/gnu/grub/grub-$version.tar.xz \
-	http://unifoundry.com/unifont-5.1.20080820.bdf.gz \
+	http://unifoundry.com/unifont-5.1.20080820.pcf.gz \
 	$name-10_linux.diff grub.cfg.sample)
 
 build() {
@@ -25,5 +25,7 @@ build() {
 	make
 	make DESTDIR=$PKG install
 	rm -rf $PKG/usr/share/{info,locale,grub/themes}
-	$PKG/usr/bin/grub-mkfont -o $PKG/usr/share/grub/unifont.pf2
+	gzip -d $SRC/unifont-5.1.20080820.pcf.gz
+	$PKG/usr/bin/grub-mkfont -o $PKG/usr/share/grub/unifont.pf2 \
+		$SRC/unifont-5.1.20080820.pcf
 }
