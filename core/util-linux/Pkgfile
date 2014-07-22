@@ -2,11 +2,12 @@
 # URL:         http://userweb.kernel.org/~kzak/util-linux-ng/
 # Maintainer:  Riptide Maintainers <riptide_devel@googlegroups.com>
 # Depends on:  ncurses zlib
+# Last inspected: 22-07-2014
 
 name=util-linux
-version=2.24.2
+version=2.25
 release=1
-source=(http://ftp.kernel.org/pub/linux/utils/$name/v2.24/$name-$version.tar.xz)
+source=(http://ftp.kernel.org/pub/linux/utils/$name/v2.25/$name-$version.tar.xz)
 
 build() {
     cd $name-$version
